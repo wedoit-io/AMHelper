@@ -14,44 +14,44 @@ In questo breve tutorial vedremo come recuperare i dati degli ordini con AMHelpe
 
 1. Creare una nuova solution in Visual studio
 
-* Installare con nuget la libreria
+2. Installare con nuget la libreria
 ```
   PM> Install-Package AMHelper
 ```
 
-* Aggiungere lo using in cima progetto
+3. Aggiungere lo using in cima progetto
 ```c#
   using AMHelper.WS;
 ```
 
-* Imposta i token di autorizzazione per leggere da License Manager e dall'AppManager (contattare Apexnet per le chiavi)
+4. Imposta i token di autorizzazione per leggere da License Manager e dall'AppManager (contattare Apexnet per le chiavi)
 ```c#
   // Chiavi
   string AuthKeyLM = "3405D863-C49C-4D4B-B1FF-35D6231C61D9";
   string AuthKeyAM = "AAB993AE-92B7-4E88-BC59-B231F0CDAD7C";
 ```
 
-* Identifica gli url di collegamento all'AppManager
+5. Identifica gli url di collegamento all'AppManager
 ```c#
   // Dove è situato il mio AM ?
   GetDataLM lmdata = new GetDataLM(AuthKeyLM);
 ```
 
-* Recupera i dati dall'AppManager
+6. Recupera i dati dall'AppManager
 ```c#
   // Quali dati contiene il mio AM ?
   ws_rec_lmparam AMData = null;
   bool lmRetVal = lmdata.get_am_par(ref AMData);
 ```
 
-* Recupera i dati dall'AppManager
+7. Recupera i dati dall'AppManager
 ```c#
   // Quali dati contiene il mio AM ?
   ws_rec_lmparam AMData = null;
   bool lmRetVal = lmdata.get_am_par(ref AMData);
 ```
 
-* Componi l'url
+8. Componi l'url
 ```c#
   string wsURL = "";
   if (lmRetVal && AMData != null)
@@ -65,13 +65,13 @@ In questo breve tutorial vedremo come recuperare i dati degli ordini con AMHelpe
   }
 ```
 
-* Recupera da una tua tabella di configurazione l'ultimi ID Ordine ottenuto
+9. Recupera da una tua tabella di configurazione l'ultimi ID Ordine ottenuto
   GetMyLastOrdersID è la tua funzione che dovrai sviluppare per recuperare il dato
 ```c#
   // Leggo l'ID dell'ultimo ordine recuperato dal WS. Se è la prima volta tornerà 0 (zero)
   int LastStoredID = GetMyLastOrdersID();
 ```
-* Recupero i dati degli ordini
+10. Recupero i dati degli ordini
 ```c#
   // Istanzio l'oggetto Export dell'AMHelper
   GetDataAM ed = new GetDataAM(AuthKeyAM, wsURL);
@@ -81,7 +81,7 @@ In questo breve tutorial vedremo come recuperare i dati degli ordini con AMHelpe
   bool RetVal = ed.exp_orders(LastStoredID, ref OrdersData);
 ```
 
-* Leggo i dati recuperati
+11. Leggo i dati recuperati
 ```c#
 if (RetVal && OrdersData != null)
       {
