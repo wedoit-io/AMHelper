@@ -18,7 +18,6 @@ In questo breve tutorial vedremo come recuperare i dati degli ordini con AMHelpe
 ```
   PM> Install-Package AMHelper
 ```
-
 3. Aggiungere lo using in cima progetto
 ```c#
   using AMHelper.WS;
