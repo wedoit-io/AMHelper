@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AMHelper</id>
+    <version>1.0.0.5</version>
+    <title>AMHelper</title>
+    <authors>Stefano Teodorani</authors>
+    <owners>Stefano Teodorani</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Apex-net APPManager helper for iCommerce IOS App</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>iorder icommerce ib igamma</tags>
+  </metadata>
+</package>
