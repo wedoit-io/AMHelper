@@ -112,8 +112,10 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
 Dipendenze
 ---
 Nella versione compilata per il framework 2.0, vengono utilizzate 2 librerie:
-1. [RestSharpNet2.0]([https://github.com/mcintyre321/RestSharp-.NET-2.0-Fork)
-2. Newtonsoft 4.5
+
+* [RestSharpNet2.0]([https://github.com/mcintyre321/RestSharp-.NET-2.0-Fork)
+* Newtonsoft 4.5
 
 Nella versione compilata per il framework 4.0, viene usata la libreria:
-1. [RestSharp]([http://restsharp.org/)
+
+* [RestSharp]([http://restsharp.org/)
