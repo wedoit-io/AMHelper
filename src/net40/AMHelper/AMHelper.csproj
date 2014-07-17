@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9F42666-C7A6-4808-93DE-9C5EED1A9835}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMHelper</RootNamespace>
+    <AssemblyName>AMHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\lib\4.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_art.cs">
+      <Link>CSV\rec_art.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_articoli_assortimenti.cs">
+      <Link>CSV\rec_articoli_assortimenti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_conf.cs">
+      <Link>CSV\rec_art_conf.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_lang.cs">
+      <Link>CSV\rec_art_lang.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_ultacq.cs">
+      <Link>CSV\rec_art_ultacq.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_ultven.cs">
+      <Link>CSV\rec_art_ultven.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_um.cs">
+      <Link>CSV\rec_art_um.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_assortimenti.cs">
+      <Link>CSV\rec_assortimenti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_campagne.cs">
+      <Link>CSV\rec_campagne.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_canali_vendita.cs">
+      <Link>CSV\rec_canali_vendita.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_catalogo.cs">
+      <Link>CSV\rec_catalogo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_citta.cs">
+      <Link>CSV\rec_citta.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_classi_sconto.cs">
+      <Link>CSV\rec_classi_sconto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clienti_assortimenti.cs">
+      <Link>CSV\rec_clienti_assortimenti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_age.cs">
+      <Link>CSV\rec_clifor_age.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_blo.cs">
+      <Link>CSV\rec_clifor_blo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_cate.cs">
+      <Link>CSV\rec_clifor_cate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_dest.cs">
+      <Link>CSV\rec_clifor_dest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_detcon.cs">
+      <Link>CSV\rec_clifor_detcon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_fatt.cs">
+      <Link>CSV\rec_clifor_fatt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_gen.cs">
+      <Link>CSV\rec_clifor_gen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_girovisita.cs">
+      <Link>CSV\rec_clifor_girovisita.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_note.cs">
+      <Link>CSV\rec_clifor_note.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_righdoc.cs">
+      <Link>CSV\rec_clifor_righdoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_scadoc.cs">
+      <Link>CSV\rec_clifor_scadoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_testdoc.cs">
+      <Link>CSV\rec_clifor_testdoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_condpag.cs">
+      <Link>CSV\rec_condpag.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_condpag_lang.cs">
+      <Link>CSV\rec_condpag_lang.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_custom_fields.cs">
+      <Link>CSV\rec_custom_fields.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_giacenze.cs">
+      <Link>CSV\rec_giacenze.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_info.cs">
+      <Link>CSV\rec_info.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_leads.cs">
+      <Link>CSV\rec_leads.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_acccrm.cs">
+      <Link>CSV\rec_lead_acccrm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_accessi.cs">
+      <Link>CSV\rec_lead_accessi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_detcon.cs">
+      <Link>CSV\rec_lead_detcon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_note.cs">
+      <Link>CSV\rec_lead_note.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_righoff.cs">
+      <Link>CSV\rec_lead_righoff.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_sconti.cs">
+      <Link>CSV\rec_lead_sconti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_testoff.cs">
+      <Link>CSV\rec_lead_testoff.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_liste_colori.cs">
+      <Link>CSV\rec_liste_colori.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_liste_materiali.cs">
+      <Link>CSV\rec_liste_materiali.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_listini_full.cs">
+      <Link>CSV\rec_listini_full.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_nazioni.cs">
+      <Link>CSV\rec_nazioni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_porto.cs">
+      <Link>CSV\rec_porto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_regole.cs">
+      <Link>CSV\rec_regole.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_reports.cs">
+      <Link>CSV\rec_reports.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_sconti.cs">
+      <Link>CSV\rec_sconti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_stoart.cs">
+      <Link>CSV\rec_stoart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_assortimenti.cs">
+      <Link>CSV\rec_taglie_assortimenti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_cataloghi.cs">
+      <Link>CSV\rec_taglie_cataloghi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_cataloghi_art.cs">
+      <Link>CSV\rec_taglie_cataloghi_art.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_estensioni.cs">
+      <Link>CSV\rec_taglie_estensioni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_sviluppi.cs">
+      <Link>CSV\rec_taglie_sviluppi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_sviluppi_art.cs">
+      <Link>CSV\rec_taglie_sviluppi_art.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_valute.cs">
+      <Link>CSV\rec_valute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_var_combinazioni.cs">
+      <Link>CSV\rec_var_combinazioni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\GetDataAM.cs">
+      <Link>WS\GetDataAM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\GetDataLM.cs">
+      <Link>WS\GetDataLM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_meta.cs">
+      <Link>WS\ws_meta.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_clifor.cs">
+      <Link>WS\ws_rec_clifor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_clifor_note.cs">
+      <Link>WS\ws_rec_clifor_note.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_leads.cs">
+      <Link>WS\ws_rec_leads.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_leads_note.cs">
+      <Link>WS\ws_rec_leads_note.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_lm_param.cs">
+      <Link>WS\ws_rec_lm_param.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_orders.cs">
+      <Link>WS\ws_rec_orders.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

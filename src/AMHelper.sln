@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET20", ".NET20", "{3C9485A6-CAD5-4C1B-AF40-C43E48E7EBD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMHelper", "net20\AMHelper\AMHelper.csproj", "{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET40", ".NET40", "{DFFF11AB-6E57-4445-A69F-9AAE03564E37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMHelper", "net40\AMHelper\AMHelper.csproj", "{E9F42666-C7A6-4808-93DE-9C5EED1A9835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79} = {3C9485A6-CAD5-4C1B-AF40-C43E48E7EBD3}
+		{E9F42666-C7A6-4808-93DE-9C5EED1A9835} = {DFFF11AB-6E57-4445-A69F-9AAE03564E37}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AMDataExchanger\AMDataExchanger.csproj
+	EndGlobalSection
+EndGlobal
