@@ -10,14 +10,15 @@ e i metodi per l'esportazione dei dati (es: ordini) attraverso chiamate a webser
 
 Usare AMHelper
 ---
-In questo breve tutorial vedremo come recuperare i dati degli ordini con AMHelper
+In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordini da AppManager usando AMHelper
 
 1. Creare una nuova solution in Visual studio
 
 2. Installare con nuget la libreria
-```
-  PM> Install-Package AMHelper
-```
+  ```
+    PM> Install-Package AMHelper
+  ```
+
 3. Aggiungere lo using in cima progetto
 ```c#
   using AMHelper.WS;
