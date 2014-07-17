@@ -19,10 +19,10 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
     PM> Install-Package AMHelper
   ```
 
-3. Aggiungere lo using in cima progetto
-```c#
-  using AMHelper.WS;
-```
+* Aggiungere lo using in cima progetto
+  ```c#
+    using AMHelper.WS;
+  ```
 
 4. Imposta i token di autorizzazione per leggere da License Manager e dall'AppManager (contattare Apexnet per le chiavi)
 ```c#
