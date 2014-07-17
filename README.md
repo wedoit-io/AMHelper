@@ -1,109 +1,119 @@
-Creare un pacchetto Nuget
+AMHelper
 ===
+AMHelper è una libreria distribuita attraverso nuget che consente di interfacciarsi
+in maniera estremamente semplice con il servizio di import ed export dei dati verso
+l'AppManager.
 
-Installare NuGet
+All'interno di AMHelper sono già definite tutte le strutture dati dei tracciati di import
+e i metodi per l'esportazione dei dati (es: ordini) attraverso chiamate a webservice
+
+
+Usare AMHelper
 ---
-La prima cosa da fare per creare pacchetti NuGet e' installare Nuget.
+In questo breve tutorial vedremo come recuperare i dati degli ordini con AMHelper
 
-1. Scaricare NuGet da questo link http://nuget.codeplex.com/releases/view/58939 (scaricare NuGet bootstrapper).
-2. Mettere l'eseguibilie in una cartella 
-3. Aggiungere la cartella al path di sistema
+1. Creare una nuova solution in Visual studio
 
-Nota: Non mettete, come fanno in molti repo su github, il file nuget.exe nel repository.
-
-Per prima cosa, aggiornare NuGet. C'è sempre una nuova versione !
-
+* Installare con nuget la libreria
 ```
-NuGet Update -self
+  PM> Install-Package AMHelper
 ```
 
-Configurare un pacchetto 
+* Aggiungere lo using in cima progetto
+```c#
+  using AMHelper.WS;
+```
+
+* Imposta i token di autorizzazione per leggere da License Manager e dall'AppManager (contattare Apexnet per le chiavi)
+```c#
+  // Chiavi
+  string AuthKeyLM = "3405D863-C49C-4D4B-B1FF-35D6231C61D9";
+  string AuthKeyAM = "AAB993AE-92B7-4E88-BC59-B231F0CDAD7C";
+```
+
+* Identifica gli url di collegamento all'AppManager
+```c#
+  // Dove è situato il mio AM ?
+  GetDataLM lmdata = new GetDataLM(AuthKeyLM);
+```
+
+* Recupera i dati dall'AppManager
+```c#
+  // Quali dati contiene il mio AM ?
+  ws_rec_lmparam AMData = null;
+  bool lmRetVal = lmdata.get_am_par(ref AMData);
+```
+
+* Recupera i dati dall'AppManager
+```c#
+  // Quali dati contiene il mio AM ?
+  ws_rec_lmparam AMData = null;
+  bool lmRetVal = lmdata.get_am_par(ref AMData);
+```
+
+* Componi l'url
+```c#
+  string wsURL = "";
+  if (lmRetVal && AMData != null)
+  {
+      wsURL = AMData.url_am_api + "/" + AMData.cod_prog;
+  }
+  else
+  {
+      Console.WriteLine("Qualcosa è andato male");
+      return;
+  }
+```
+
+* Recupera da una tua tabella di configurazione l'ultimi ID Ordine ottenuto
+  GetMyLastOrdersID è la tua funzione che dovrai sviluppare per recuperare il dato
+```c#
+  // Leggo l'ID dell'ultimo ordine recuperato dal WS. Se è la prima volta tornerà 0 (zero)
+  int LastStoredID = GetMyLastOrdersID();
+```
+* Recupero i dati degli ordini
+```c#
+  // Istanzio l'oggetto Export dell'AMHelper
+  GetDataAM ed = new GetDataAM(AuthKeyAM, wsURL);
+
+  // Chiamo il WS per farmi dare la lista dei leads
+  ws_rec_orders OrdersData = null;
+  bool RetVal = ed.exp_orders(LastStoredID, ref OrdersData);
+```
+
+* Leggo i dati recuperati
+```c#
+if (RetVal && OrdersData != null)
+      {
+          Console.WriteLine(String.Format("... found {0} record ", OrdersData.testate.Count.ToString()));
+
+          System.Globalization.CultureInfo itIT = System.Globalization.CultureInfo.CreateSpecificCulture("it-IT");
+
+          foreach (var t in OrdersData.testate)
+          {
+              Console.WriteLine("Codclifor:" + t.cod_clifor);
+              Console.WriteLine("Data consegna:" + t.data_consegna);
+
+              foreach (var r in t.righe)
+              {
+                  Console.WriteLine(">>> Riga: " + r.id);
+                  Console.WriteLine(">>> Cod art: " + r.codice_articolo);
+                  // .... etc..
+              }
+          }
+      }
+      else
+      {
+          Console.WriteLine("... booh! ");
+      }
+}
+```
+
+Dipendenze
 ---
-1. Andare nella cartella in cui e' situalto il file .csproj
-2. Creare il manifest
+Nella versione compilata per il framework 2.0, vengono utilizzate 2 librerie:
+1. [RestSharpNet2.0]([https://github.com/mcintyre321/RestSharp-.NET-2.0-Fork)
+2. Newtonsoft 4.5
 
-```
-nuget spec
-```
-
-3. Questo comando crea un file XML con questo formato :
-
-```xml
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>MyPackageId</id>
-    <version>1.0</version>
-    <authors>philha</authors>
-    <owners>philha</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Package description</description>
-    <tags>Tag1 Tag2</tags>
-    <dependencies>
-      <dependency id="SampleDependency" version="1.0" />
-    </dependencies>
-  </metadata>
-</package>
-```
-
-Modificarlo a piacimento.
-Ecco il mio.
-
-```xml
-
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>Stefano Teodorani</authors>
-    <owners>Stefano Teodorani</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Apex-net APPManager helper for iCommerce IOS App</description>
-    <releaseNotes></releaseNotes>
-    <copyright>Copyright 2014</copyright>
-    <tags>iorder icommerce ib igamma</tags>
-  </metadata>
-</package>
-
-```
-
-Come si vede è possibile sostituire alcune descrizioni con variabili che vengono gestite autonomamente da NuGet (fare riferimento alla documentazione in fondo alla pagina per la lista delle variabili utilizzabili)
-
-Creare il pacchetto
----
-Dopo aver creato il manifest, per creare il pacchetto digitare da linea di comando
-
-```
-nuget pack AMHelper.csproj
-```
-
-L'esecuzione di questo comando crea un file di pacchetto con estensione nupkg
-
-Pubblicare su NuGet
----
-Dopo essersi registrati su nuiget.org, nel proprio profilo è presente una chiave. Copiarsi la chiave e da linea di comando digitare
-
-```
-nuget setApiKey Your-API-Key
-```
-
-Questo comando crea una sorta di associazione fra voi e il vostro account e rende possibile la pubblicazione del pacchetto su nuget.org.
-
-A questo punto, dal proprio profilo del sito andare in upload del pacchetto, caricarlo e il gioco e' fatto
-
-Si puo' anche fare da linea di comando con :
-
-```
-NuGet Push AMHelper.nupkg
-```
-
-Reference
----
-http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#From_a_convention_based_working_directory
-
-sezione from a project
+Nella versione compilata per il framework 4.0, viene usata la libreria:
+1. [RestSharp]([http://restsharp.org/)
