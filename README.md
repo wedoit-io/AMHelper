@@ -113,9 +113,9 @@ Dipendenze
 ---
 Nella versione compilata per il framework 2.0, vengono utilizzate 2 librerie:
 
-* [RestSharpNet2.0]([https://github.com/mcintyre321/RestSharp-.NET-2.0-Fork)
+* RestSharpNet2.0 - [https://github.com/mcintyre321/RestSharp-.NET-2.0-Fork
 * Newtonsoft 4.5
 
 Nella versione compilata per il framework 4.0, viene usata la libreria:
 
-* [RestSharp]([http://restsharp.org/)
+* RestSharp - http://restsharp.org
