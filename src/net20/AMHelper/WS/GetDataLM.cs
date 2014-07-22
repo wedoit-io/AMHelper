@@ -20,7 +20,7 @@ namespace AMHelper.WS
         private string _AuthKeyLM;
         private bool   _Production;
 
-        private string _ParamUrl;
+        // private string _ParamUrl;
 
         private string _InfoMessage;
         private string _ResponseURI;
@@ -90,7 +90,7 @@ namespace AMHelper.WS
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_lmparam>(response.Content);
 #endif
 
-#if NET40
+#if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
 

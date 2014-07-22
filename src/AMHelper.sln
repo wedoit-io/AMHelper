@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET40", ".NET40", "{DFFF11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMHelper", "net40\AMHelper\AMHelper.csproj", "{E9F42666-C7A6-4808-93DE-9C5EED1A9835}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET35", ".NET35", "{156DDBDC-D272-413E-9B58-A059DE754423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMHelper", "net35\AMHelper\AMHelper.csproj", "{C0BCD9D2-C5DC-471A-BC65-72F679AC21B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9F42666-C7A6-4808-93DE-9C5EED1A9835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BCD9D2-C5DC-471A-BC65-72F679AC21B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BCD9D2-C5DC-471A-BC65-72F679AC21B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BCD9D2-C5DC-471A-BC65-72F679AC21B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BCD9D2-C5DC-471A-BC65-72F679AC21B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{137C60B9-0F2A-41BD-8F19-B1F70EDB1A79} = {3C9485A6-CAD5-4C1B-AF40-C43E48E7EBD3}
 		{E9F42666-C7A6-4808-93DE-9C5EED1A9835} = {DFFF11AB-6E57-4445-A69F-9AAE03564E37}
+		{C0BCD9D2-C5DC-471A-BC65-72F679AC21B4} = {156DDBDC-D272-413E-9B58-A059DE754423}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = AMDataExchanger\AMDataExchanger.csproj

@@ -91,7 +91,7 @@ namespace AMHelper.WS
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_leads>(response.Content);
 #endif
 
-#if NET40
+#if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
 
@@ -145,7 +145,7 @@ namespace AMHelper.WS
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_leads_note>(response.Content);
 #endif
 
-#if NET40
+#if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
                 // Se ci sono errori nella chiamata di recupero dei dati esco 
@@ -196,7 +196,7 @@ namespace AMHelper.WS
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_clifor>(response.Content);
 #endif
 
-#if NET40
+#if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
 
@@ -248,7 +248,7 @@ namespace AMHelper.WS
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_clifor_note>(response.Content);
 #endif
 
-#if NET40
+#if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
 
@@ -311,7 +311,7 @@ namespace AMHelper.WS
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_orders>(response.Content);
 #endif
 
-#if NET40
+#if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
 
