@@ -92,6 +92,7 @@
     <Compile Include="CSV\rec_liste_materiali.cs" />
     <Compile Include="CSV\rec_listini_full.cs" />
     <Compile Include="CSV\rec_nazioni.cs" />
+    <Compile Include="CSV\rec_mod_sped.cs" />
     <Compile Include="CSV\rec_porto.cs" />
     <Compile Include="CSV\rec_regole.cs" />
     <Compile Include="CSV\rec_reports.cs" />

@@ -17,6 +17,7 @@ namespace AMHelper.CSV
         public string COD_DITTA { get; set; }
         public string COD_CATALOGO { get; set; }
         public string DES_CATALOGO { get; set; }
+        public string SCONTO_MAX { get; set; }
         public string DAT_ULT_MOD { get; set; }
 
     }

@@ -50,6 +50,7 @@ namespace AMHelper.CSV
         public string SCO_PERC4 { get; set; }
         public string SCO_PERC5 { get; set; }
         public string SCO_PERC6 { get; set; }
+        public string TAG { get; set; }
         public string MAGGIORAZIONE_ANAG_PERC  { get; set; }
         public string SCONTO_PIEDE  { get; set; }
         public string COD_LISTINO  { get; set; }
