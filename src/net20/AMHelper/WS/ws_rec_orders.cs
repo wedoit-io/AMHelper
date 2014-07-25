@@ -24,6 +24,8 @@ namespace AMHelper.WS
         public string cod_ditta { get; set; }
         public string cod_operatore { get; set; }
         public string cod_prog { get; set; }
+        public string cod_porto { get; set; }
+        public string cod_mod_sped { get; set; }
         public string cod_valuta { get; set; }
         public DateTime? data_consegna { get; set; }
         public DateTime? data_ordine { get; set; }
@@ -50,6 +52,7 @@ namespace AMHelper.WS
         public string partita_iva;
         public string codice_fiscale;
         public string telefono;
+        public string telefono2;
         public string cellulare;
         public string email;
         public string fax;
@@ -68,6 +71,8 @@ namespace AMHelper.WS
         public string cod_canale_vendita;
         public string cod_categoria;
         public string cod_porto_sped;
+
+        public string ragione_sociale_destinazione;
         public string indirizzo_consegna;
         public string cod_citta_consegna;
         public string des_citta_consegna;
@@ -76,6 +81,9 @@ namespace AMHelper.WS
         public string cod_nazione_consegna;
         public string des_nazione_consegna;
         public string telefono_consegna;
+        public string cellulare_consegna;
+        public string fax_consegna;
+
     }
 
     public class RigaOrdineExport
