@@ -170,6 +170,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\rec_listini_full.cs">
       <Link>CSV\rec_listini_full.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\rec_mod_sped.cs">
+      <Link>CSV\rec_mod_sped.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\rec_nazioni.cs">
       <Link>CSV\rec_nazioni.cs</Link>
     </Compile>
