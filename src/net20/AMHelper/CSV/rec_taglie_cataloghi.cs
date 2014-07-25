@@ -19,6 +19,5 @@ namespace AMHelper.CSV
         public string DES_CATALOGO { get; set; }
         public string SCONTO_MAX { get; set; }
         public string DAT_ULT_MOD { get; set; }
-
     }
 }
