@@ -14,11 +14,33 @@ using RestSharp;
 
 namespace AMHelper.WS
 {
+    /*
+    public class GetDataAMException : Exception
+    {
+    
+         * 
+         * base(message, this.InnerException)
+         * 
+        public EmployeeListNotFoundException()
+        {
+        }
+
+        public EmployeeListNotFoundException(string message)
+            : base(message)
+        {
+        }
+
+        public EmployeeListNotFoundException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
+       
+    }
+     */
+
     public class GetDataAM
     {        
         // Private fields
-        private string _AuthKeyAM;
-        private string _BaseUrl;
         private string _LeadsUrl;
         private string _LeadsNoteUrl;
         private string _CliforUrl;
@@ -26,6 +48,73 @@ namespace AMHelper.WS
         private string _OrdersUrl;
         private string _InfoMessage;
         private string _ResponseURI;
+
+        // Proxy fields
+        private string _ProxyUser;
+        private string _ProxyPassword;
+        private string _ProxyHost;
+        private int _ProxyPort;
+
+        // Proxy properties
+
+        private string ProxyHost
+        {
+            get
+            {
+                return _ProxyHost;
+            }
+            set
+            {
+                _ProxyHost = value;
+            }
+        }
+
+        private int ProxyPort
+        {
+            get
+            {
+                return _ProxyPort;
+            }
+            set
+            {
+                _ProxyPort = value;
+            }
+        }
+        private string ProxyUser
+        {
+            get
+            {
+                return _ProxyUser;
+            }
+            set
+            {
+                _ProxyUser = value;
+            }
+        }
+        private string ProxyPassword
+        {
+            get
+            {
+                return _ProxyPassword;
+            }
+            set
+            {
+                _ProxyPassword = value;
+            }
+        }
+
+
+        public void HttpProxyAutentication(string ProxyUser, string ProxyPassword, string ProxyHost, int ProxyPort)
+        {
+            this._ProxyUser = ProxyUser;
+            this._ProxyPassword = ProxyPassword;
+            this._ProxyHost = ProxyHost;
+            this._ProxyPort = ProxyPort;
+        }
+
+
+        private string _AuthKeyAM;
+        private string _BaseUrl;
 
         // Property AuthKey
         private string AuthKeyAM    
@@ -72,6 +161,12 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_LeadsUrl);
 
+                if (this._ProxyUser != "")
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
                 // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
@@ -96,11 +191,14 @@ namespace AMHelper.WS
 #endif
 
 
-                // Se ci sono errori nella chiamata di recupero dei dati esco 
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode is not OK");
+                }
+
                 if (response.ErrorException != null)
                 {
-                    _InfoMessage = "Error retrieving response 2.  Check inner details for more info.";
-                    return false;
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
 
@@ -126,6 +224,13 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_LeadsNoteUrl);
 
+                if (this._ProxyUser != "")
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
                 // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/notelead?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&lastID=0&count=0
@@ -148,11 +253,16 @@ namespace AMHelper.WS
 #if NET35 || NET40
                 var myDeserializedData = response.Data;
 #endif
-                // Se ci sono errori nella chiamata di recupero dei dati esco 
+
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode is not OK");
+                }
+
                 if (response.ErrorException != null)
                 {
-                    _InfoMessage = "Error retrieving response 2.  Check inner details for more info.";
-                    return false;
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
                 if (response.Data.note.Count == 0)
@@ -176,6 +286,13 @@ namespace AMHelper.WS
             try
             {
                 var client = new RestClient(_CliforUrl);
+
+                if (this._ProxyUser != "")
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
 
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
@@ -201,10 +318,16 @@ namespace AMHelper.WS
 #endif
 
                 // Se ci sono errori nella chiamata di recupero dei dati esco 
+
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode is not OK");
+                }
+
                 if (response.ErrorException != null)
                 {
-                    _InfoMessage = "Error retrieving response 2.  Check inner details for more info.";
-                    return false;
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
                 if (response.Data.clienti.Count == 0)
@@ -230,6 +353,13 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_CliforNoteUrl);
 
+                if (this._ProxyUser != "")
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
                 // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
@@ -252,11 +382,15 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-                // Se ci sono errori nella chiamata di recupero dei dati esco 
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode is not OK");
+                }
+
                 if (response.ErrorException != null)
                 {
-                    _InfoMessage = "Error retrieving response 2.  Check inner details for more info.";
-                    return false;
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
                 if (response.Data.note.Count == 0)
@@ -280,6 +414,12 @@ namespace AMHelper.WS
             try
             {
                 var client = new RestClient(_OrdersUrl);
+
+                if (this._ProxyUser != "")
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
 
                 // Estraggo gli ordini (50 alla volta)
                 // ---------------------------------------------------------------
@@ -315,13 +455,15 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-                //Console.WriteLine("5");
 
-                // Se ci sono errori nella chiamata di recupero dei dati esco 
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode is not OK");
+                }
+
                 if (response.ErrorException != null)
                 {
-                    _InfoMessage = "Error retrieving response 2.  Check inner details for more info.";
-                    return false;
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
                 if (response.Data.testate.Count == 0)
@@ -337,7 +479,7 @@ namespace AMHelper.WS
             {
                 //Console.WriteLine(ex.Message);
                 //Console.WriteLine(_InfoMessage);
-                throw new Exception("AMHelper: [" + _ResponseURI + "]", ex);
+                throw new Exception("AMHelper: [" + _ResponseURI + "]" + _InfoMessage, ex);
             }
             return true;
         }

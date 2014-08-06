@@ -14,16 +14,91 @@ using RestSharp;
 
 namespace AMHelper.WS
 {
+    /*
+    public class GetDataLMException : Exception
+    {
+       
+        public EmployeeListNotFoundException()
+        {
+        }
+
+        public EmployeeListNotFoundException(string message)
+            : base(message)
+        {
+        }
+
+        public EmployeeListNotFoundException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
+         
+    }
+    */
+
     public class GetDataLM
-    {        
-        // Private fields
-        private string _AuthKeyLM;
-        private bool   _Production;
+    {
 
         // private string _ParamUrl;
-
         private string _InfoMessage;
         private string _ResponseURI;
+
+        // Proxy fields
+        private string _ProxyUser;
+        private string _ProxyPassword;
+        private string _ProxyHost;
+        private int _ProxyPort;
+
+        // Proxy properties
+
+        private string ProxyHost
+        {
+            get
+            {
+                return _ProxyHost;
+            }
+            set
+            {
+                _ProxyHost = value;
+            }
+        }
+
+        private int ProxyPort
+        {
+            get
+            {
+                return _ProxyPort;
+            }
+            set
+            {
+                _ProxyPort = value;
+            }
+        }
+        private string ProxyUser    
+        {
+            get
+            {
+                return _ProxyUser;
+            }
+            set
+            {
+                _ProxyUser = value;
+            }
+        }
+        private string ProxyPassword    
+        {
+            get
+            {
+                return _ProxyPassword;
+            }
+            set
+            {
+                _ProxyPassword = value;
+            }
+        }
+
+        // Private fields
+        private string _AuthKeyLM;
+        private bool _Production;
 
         // Property AuthKey
         private string AuthKeyLM    
@@ -49,6 +124,15 @@ namespace AMHelper.WS
                 _Production = value;
             }
         }
+
+        public void HttpProxyAutentication(string ProxyUser, string ProxyPassword, string ProxyHost, int ProxyPort)
+        {
+            this._ProxyUser = ProxyUser;
+            this._ProxyPassword = ProxyPassword;
+            this._ProxyHost = ProxyHost;
+            this._ProxyPort = ProxyPort;
+        }
+
         public GetDataLM(string AuthKeyLM)
         {
             this.AuthKeyLM = AuthKeyLM;
@@ -77,6 +161,14 @@ namespace AMHelper.WS
             {
                 
                 var client = new RestClient(ServiceUrl);
+
+                if (this._ProxyUser != "")
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);  
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
                 var request = new RestRequest("/", Method.POST);
 
                 request.RequestFormat = DataFormat.Json;
@@ -94,18 +186,17 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-                // Se ci sono errori nella chiamata di recupero dei dati esco 
-                if (response.ErrorException != null)
+
+                if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    _InfoMessage = "Error retrieving response 2.  Check inner details for more info.";
-                    return false;
+                    throw new Exception("StatusCode is not OK");
                 }
 
-                if (response.StatusCode !=  HttpStatusCode.OK)
+                if (response.ErrorException != null)
                 {
-                    _InfoMessage = "Data not found + Status code:" + response.StatusCode;
-                    return false;
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
+
 
                 AMData = myDeserializedData;
             }

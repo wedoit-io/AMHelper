@@ -51,7 +51,7 @@ namespace AMHelper.WS
         public string ragione_sociale;
         public string partita_iva;
         public string codice_fiscale;
-        public string telefono;
+        public string telefono1;
         public string telefono2;
         public string cellulare;
         public string email;
