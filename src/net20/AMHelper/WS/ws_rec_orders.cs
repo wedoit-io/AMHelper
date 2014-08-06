@@ -16,31 +16,40 @@ namespace AMHelper.WS
     // In API Cercare CodaTestataOrdineExport
     public class TestataOrdineExport
     {
+
+        public DateTime? data_consegna { get; set; }
+        public DateTime? data_import { get; set; }
+        public DateTime? data_ordine { get; set; }
+        public decimal id { get; set; }
+        public decimal unique_id { get; set; }
+        public decimal? sconto_1 { get; set; }
+        public decimal? sconto_2 { get; set; }
+        public decimal? sconto_3 { get; set; }
+        public decimal? sconto_4 { get; set; }
+        public decimal? sconto_5 { get; set; }
+        public decimal? sconto_6 { get; set; }
         public string cod_agente { get; set; }
         public string cod_clifor { get; set; }
+        public string cod_colore_estensione1 { get; set; }
+        public string cod_colore_estensione2 { get; set; }
         public string cod_cond_pag { get; set; }
         public string cod_cond_pag_deperibilita { get; set; }
         public string cod_destinazione { get; set; }
         public string cod_ditta { get; set; }
-        public string cod_operatore { get; set; }
-        public string cod_prog { get; set; }
-        public string cod_porto { get; set; }
-        public string cod_mod_sped { get; set; }
-        public string cod_valuta { get; set; }
-        public DateTime? data_consegna { get; set; }
-        public DateTime? data_ordine { get; set; }
-        public string ext_cod_tipo_ord { get; set; }
-        public string guid_test_ord { get; set; }
-        public decimal id { get; set; }
-        public string unique_id { get; set; }
-        public decimal? sconto { get; set; }
-        public string note { get; set; }
-        public string utente { get; set; }
         public string cod_materiale_estensione1 { get; set; }
         public string cod_materiale_estensione2 { get; set; }
-        public string cod_colore_estensione1 { get; set; }
-        public string cod_colore_estensione2 { get; set; }
-        public DateTime? data_import { get; set; }
+        public string cod_mod_sped { get; set; }
+        public string cod_operatore { get; set; }
+        public string cod_porto { get; set; }
+        public string cod_prog { get; set; }
+        public string cod_valuta { get; set; }
+        public string ext_cod_tipo_ord { get; set; }
+        public string guid_test_ord { get; set; }
+        public string note { get; set; }
+        public string utente { get; set; }
+
+       
+
         public List<Clienti> clienti { get; set; }
         public List<RigaOrdineExport> righe { get; set; }
     }
@@ -48,41 +57,44 @@ namespace AMHelper.WS
     // In API cercare CodaNuovoClienteOrdineExport
     public class Clienti
     {
-        public string ragione_sociale;
-        public string partita_iva;
-        public string codice_fiscale;
-        public string telefono1;
-        public string telefono2;
-        public string cellulare;
-        public string email;
-        public string fax;
-        public string indirizzo;
-        public string cod_citta;
-        public string des_citta;
-        public string cap;
-        public string provincia;
-        public string cod_nazione;
-        public string des_nazione;
-        public string cod_cond_pag;
-        public string des_cond_pag;
-        public string iban;
-        public string note;
-        public string cod_classe_sconto;
-        public string cod_canale_vendita;
-        public string cod_categoria;
-        public string cod_porto_sped;
+        public string cap { get; set; }
+        public string cellulare { get; set; }
+        public string cod_canale_vendita { get; set; }
+        public string cod_categoria { get; set; }
+        public string cod_citta { get; set; }
+        public string cod_classe_sconto { get; set; }
+        public string cod_cond_pag { get; set; }
+        public string cod_nazione { get; set; }
+        public string cod_porto_sped { get; set; }
+        public string codice_fiscale { get; set; }
+        public string des_citta { get; set; }
+        public string des_cond_pag { get; set; }
+        public string des_nazione { get; set; }
+        public string email { get; set; }
+        public string fax { get; set; }
+        public string iban { get; set; }
+        public string indirizzo { get; set; }
+        public string note { get; set; }
+        public string partita_iva { get; set; }
+        public string provincia { get; set; }
+        public string ragione_sociale { get; set; }
+        public string telefono1 { get; set; }
+        public string telefono2 { get; set; }
 
-        public string ragione_sociale_destinazione;
-        public string indirizzo_consegna;
-        public string cod_citta_consegna;
-        public string des_citta_consegna;
-        public string cap_consegna;
-        public string provincia_consegna;
-        public string cod_nazione_consegna;
-        public string des_nazione_consegna;
-        public string telefono_consegna;
-        public string cellulare_consegna;
-        public string fax_consegna;
+
+        // Dati consegna
+        public string ragione_sociale_consegna { get; set; }
+        public string indirizzo_consegna { get; set; }
+        public string cod_citta_consegna { get; set; }
+        public string des_citta_consegna { get; set; }
+        public string cap_consegna { get; set; }
+        public string provincia_consegna { get; set; }
+        public string cod_nazione_consegna { get; set; }
+        public string des_nazione_consegna { get; set; }
+        public string telefono_consegna { get; set; }
+        public string cellulare_consegna { get; set; }
+        public string fax_consegna { get; set; }
+        public string cod_porto_consegna { get; set; }
 
     }
 
