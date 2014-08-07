@@ -175,8 +175,20 @@ namespace AMHelper.WS
                 request.AddBody(new { AuthKeyAPI = AuthKeyLM });
                 var response = client.Execute<ws_rec_lmparam>(request);
 
-                _ResponseURI = response.ResponseUri.ToString();
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
 
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
 
 #if NET20 
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_lmparam>(response.Content);
@@ -186,23 +198,13 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception("StatusCode is not OK");
-                }
-
-                if (response.ErrorException != null)
-                {
-                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
-                }
-
+                _ResponseURI = response.ResponseUri.ToString();
 
                 AMData = myDeserializedData;
             }
             catch (Exception ex)
             {
-                throw new Exception("AMHelper:", ex);
+                throw new Exception("get_am_par: " + ex.Message, ex);
             }
             return true;
         }

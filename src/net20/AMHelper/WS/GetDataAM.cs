@@ -178,9 +178,23 @@ namespace AMHelper.WS
                 request.AddParameter("count", 0);
                 request.AddParameter("lastID", StartID);
                 //request.AddParameter("lastDateImport", "");       
+                
                 var response = client.Execute<ws_rec_leads>(request);
 
-                _ResponseURI = response.ResponseUri.ToString();
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
 
 #if NET20 
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_leads>(response.Content);
@@ -190,17 +204,7 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception("StatusCode is not OK");
-                }
-
-                if (response.ErrorException != null)
-                {
-                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
-                }
-
+                _ResponseURI = response.ResponseUri.ToString();
 
                 if (response.Data.leads.Count == 0)
                 {
@@ -213,7 +217,7 @@ namespace AMHelper.WS
             }
             catch (Exception ex)
             {
-                throw new Exception("AMHelper: [" +_ResponseURI + "]", ex);
+                throw new Exception("exp_leads: Uri:" + _ResponseURI + ", Message:" + ex.Message, ex);
             }
             return true;
         }
@@ -244,7 +248,20 @@ namespace AMHelper.WS
                 //request.AddParameter("lastDateImport", "");       
                 var response = client.Execute<ws_rec_leads_note>(request);
 
-                _ResponseURI = response.ResponseUri.ToString();
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
 
 #if NET20 
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_leads_note>(response.Content);
@@ -254,16 +271,7 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception("StatusCode is not OK");
-                }
-
-                if (response.ErrorException != null)
-                {
-                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
-                }
+                _ResponseURI = response.ResponseUri.ToString();
 
                 if (response.Data.note.Count == 0)
                 {
@@ -276,7 +284,7 @@ namespace AMHelper.WS
             }
             catch (Exception ex)
             {
-                throw new Exception("AMHelper: [" + _ResponseURI + "]", ex);
+                throw new Exception("exp_leads_note: Uri:" + _ResponseURI + ", Message:" + ex.Message, ex);
             }
             return true;
         }
@@ -307,7 +315,20 @@ namespace AMHelper.WS
                 //request.AddParameter("lastDateImport", "");       
                 var response = client.Execute<ws_rec_clifor>(request);
 
-                _ResponseURI = response.ResponseUri.ToString();
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
 
 #if NET20 
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_clifor>(response.Content);
@@ -317,18 +338,7 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-                // Se ci sono errori nella chiamata di recupero dei dati esco 
-
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception("StatusCode is not OK");
-                }
-
-                if (response.ErrorException != null)
-                {
-                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
-                }
+                _ResponseURI = response.ResponseUri.ToString();
 
                 if (response.Data.clienti.Count == 0)
                 {
@@ -342,7 +352,7 @@ namespace AMHelper.WS
             }
             catch (Exception ex)
             {
-                throw new Exception("AMHelper: [" + _ResponseURI + "]", ex);
+                throw new Exception("exp_clifor: Uri:" + _ResponseURI + ", Message:" + ex.Message, ex);
             }
             return true;
         }
@@ -373,7 +383,21 @@ namespace AMHelper.WS
                 //request.AddParameter("lastDateImport", "");       
                 var response = client.Execute<ws_rec_clifor_note>(request);
 
-                _ResponseURI = response.ResponseUri.ToString();
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
+
 #if NET20 
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_clifor_note>(response.Content);
 #endif
@@ -382,16 +406,7 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception("StatusCode is not OK");
-                }
-
-                if (response.ErrorException != null)
-                {
-                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
-                }
+                _ResponseURI = response.ResponseUri.ToString();
 
                 if (response.Data.note.Count == 0)
                 {
@@ -404,7 +419,7 @@ namespace AMHelper.WS
             }
             catch (Exception ex)
             {
-                throw new Exception("AMHelper: [" + _ResponseURI + "]", ex);
+                throw new Exception("exp_clifor_note: Uri:" + _ResponseURI + ", Message:" + ex.Message, ex);
             }
             return true;
         }
@@ -440,10 +455,21 @@ namespace AMHelper.WS
                 //request.AddParameter("lastDateImport", "");       
                 var response = client.Execute<ws_rec_orders>(request);
 
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
                 
-                _ResponseURI = response.ResponseUri.ToString();
-
-
                 // La serializzazione di RestSharp scazza le date con il .net framework 2.0.
                 // Deserializzo i dati in un altro modo
 
@@ -455,16 +481,7 @@ namespace AMHelper.WS
                 var myDeserializedData = response.Data;
 #endif
 
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new Exception("StatusCode is not OK");
-                }
-
-                if (response.ErrorException != null)
-                {
-                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
-                }
+                _ResponseURI = response.ResponseUri.ToString();
 
                 if (response.Data.testate.Count == 0)
                 {
@@ -479,7 +496,7 @@ namespace AMHelper.WS
             {
                 //Console.WriteLine(ex.Message);
                 //Console.WriteLine(_InfoMessage);
-                throw new Exception("AMHelper: [" + _ResponseURI + "]" + _InfoMessage, ex);
+                throw new Exception("exp_orders: Uri:" + _ResponseURI + ", Message:" + ex.Message, ex);
             }
             return true;
         }

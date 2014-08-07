@@ -22,11 +22,11 @@ namespace AMHelperSample
             {
                 // Chiavi
                 string AuthKeyLM = "LMKEY2";
-                string AuthKeyAM = "AMKEYk";
+                string AuthKeyAM = "AMKEY2";
                 string ProxyUser = "teo";
                 string ProxyPassword = "gigi";
                 string ProxyHost = "192.168.10.134";
-                int ProxyPort = 8080;
+                int ProxyPort = 8081;
                 int LastStoredID = 1;
 
                 bool ProxyEnable = true;
