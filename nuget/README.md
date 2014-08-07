@@ -17,6 +17,12 @@ Per prima cosa, aggiornare NuGet. C'è sempre una nuova versione !
 NuGet Update -self
 ```
 
+Note di rilascio
+---
+L'elenco completo delle modifiche è disponibile a questo indirizzo:
+
+* https://github.com/Apex-net/AMHelper/releases
+
 Configurare un pacchetto 
 ---
 1. Andare nella cartella in cui e' situalto il file .csproj
