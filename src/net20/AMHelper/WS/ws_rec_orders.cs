@@ -39,8 +39,10 @@ namespace AMHelper.WS
         public string cod_materiale_estensione1 { get; set; }
         public string cod_materiale_estensione2 { get; set; }
         public string cod_mod_sped { get; set; }
+        public string des_mod_sped { get; set; }
         public string cod_operatore { get; set; }
         public string cod_porto { get; set; }
+        public string des_porto { get; set; }
         public string cod_prog { get; set; }
         public string cod_valuta { get; set; }
         public string ext_cod_tipo_ord { get; set; }
@@ -66,6 +68,7 @@ namespace AMHelper.WS
         public string cod_cond_pag { get; set; }
         public string cod_nazione { get; set; }
         public string cod_porto_sped { get; set; }
+        public string des_porto_sped { get; set; }
         public string codice_fiscale { get; set; }
         public string des_citta { get; set; }
         public string des_cond_pag { get; set; }
