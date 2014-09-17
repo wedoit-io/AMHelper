@@ -148,6 +148,9 @@ namespace AMHelper.WS
         public bool get_am_par(ref ws_rec_lmparam AMData)
         {
             string ServiceUrl = "";
+  
+
+
             if (Production)
             {
                 ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/getAMParam";
@@ -162,7 +165,7 @@ namespace AMHelper.WS
                 
                 var client = new RestClient(ServiceUrl);
 
-                if (this._ProxyUser != "")
+                if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
                     client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);  
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
@@ -201,6 +204,13 @@ namespace AMHelper.WS
                 _ResponseURI = response.ResponseUri.ToString();
 
                 AMData = myDeserializedData;
+
+                if (AMData != null)
+                {
+                    AMData.url_am_api = AMData.url_am_api + "/" + AMData.cod_prog;
+                }
+          
+
             }
             catch (Exception ex)
             {

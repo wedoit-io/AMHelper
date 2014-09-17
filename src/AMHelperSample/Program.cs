@@ -21,20 +21,27 @@ namespace AMHelperSample
             try
             {
                 // Chiavi
-                string AuthKeyLM = "LMKEY2";
-                string AuthKeyAM = "AMKEY2";
+                //string AuthKeyLM = "LMKEY2";
+                //string AuthKeyAM = "AMKEY2";
+
+                string AuthKeyLM = "3818B678-8333-4DAE-9636-44142316F424";
+                string AuthKeyAM = "DDC4C5C1-072F-41D8-A728-D8E4BA686588";
+                bool ProxyEnable = false;
+                bool Produzione =  true;
+
+                // ===========================================
                 string ProxyUser = "teo";
                 string ProxyPassword = "gigi";
                 string ProxyHost = "192.168.10.134";
                 int ProxyPort = 8081;
                 int LastStoredID = 1;
 
-                bool ProxyEnable = true;
+
 
 
                 // http://am.apexnet.it/api_fwco/v1/progetti/wt.fwco/exportPaginazione/codaOrdini?authKey=43450611-EA2D-4CE8-B1FF-B2EB7C42114A&offset=0&limit=10&count=0&lastID=1490
                 // Dove è situato il mio AM ?
-                GetDataLM lmdata = new GetDataLM(AuthKeyLM, false);
+                GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
 
                 if (ProxyEnable)
                 {
@@ -48,16 +55,9 @@ namespace AMHelperSample
                 bool lmRetVal = lmdata.get_am_par(ref AMData);
 
 
-                string wsURL = "";
-                if (lmRetVal && AMData != null)
-                {
-                    wsURL = AMData.url_am_api + "/" + AMData.cod_prog;
-                }
-                else
-                {
-                    Console.WriteLine("Qualcosa è andato male");
-                    return;
-                }
+ 
+                string wsURL = AMData.url_am_api ;
+
 
 
 

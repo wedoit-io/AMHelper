@@ -161,7 +161,7 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_LeadsUrl);
 
-                if (this._ProxyUser != "")
+                if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
                     client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
@@ -228,7 +228,7 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_LeadsNoteUrl);
 
-                if (this._ProxyUser != "")
+                if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
                     client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
@@ -295,7 +295,7 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_CliforUrl);
 
-                if (this._ProxyUser != "")
+                if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
                     client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
@@ -363,7 +363,7 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_CliforNoteUrl);
 
-                if (this._ProxyUser != "")
+                if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
                     client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
@@ -430,7 +430,7 @@ namespace AMHelper.WS
             {
                 var client = new RestClient(_OrdersUrl);
 
-                if (this._ProxyUser != "")
+                if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
                     client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
