@@ -104,3 +104,9 @@ Nella versione compilata per il framework 2.0, vengono utilizzate 2 librerie:
 Nella versione compilata per il framework 4.0, viene usata la libreria:
 
 * RestSharp - http://restsharp.org
+
+Segnalazioni
+---
+Potete segnalare errori o imprecisioni della documentazione a questo link:
+
+* https://github.com/Apex-net/AMHelper/issues
