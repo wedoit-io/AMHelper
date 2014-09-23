@@ -51,18 +51,9 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
     bool lmRetVal = lmdata.get_am_par(ref AMData);
   ```
 
-8. Componi l'url
+8. Recupera l'url dell'appmanager
   ```c#
-    string wsURL = "";
-    if (lmRetVal && AMData != null)
-    {
-        wsURL = AMData.url_am_api + "/" + AMData.cod_prog;
-    }
-    else
-    {
-        Console.WriteLine("Qualcosa è andato male");
-        return;
-    }
+    wsURL = AMData.url_am_api;
   ```
 
 9. Recupera da una tua tabella di configurazione l'ultimi ID Ordine ottenuto
