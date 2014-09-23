@@ -44,25 +44,19 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
     bool lmRetVal = lmdata.get_am_par(ref AMData);
   ```
 
-7. Recupera i dati dall'AppManager
-  ```c#
-    // Quali dati contiene il mio AM ?
-    ws_rec_lmparam AMData = null;
-    bool lmRetVal = lmdata.get_am_par(ref AMData);
-  ```
-
-8. Recupera l'url dell'appmanager
+7. Recupera l'url dell'appmanager
   ```c#
     wsURL = AMData.url_am_api;
   ```
 
-9. Recupera da una tua tabella di configurazione l'ultimi ID Ordine ottenuto
+8. Recupera da una tua tabella di configurazione l'ultimi ID Ordine ottenuto
   GetMyLastOrdersID è la tua funzione che dovrai sviluppare per recuperare il dato
   ```c#
     // Leggo l'ID dell'ultimo ordine recuperato dal WS. Se è la prima volta tornerà 0 (zero)
     int LastStoredID = GetMyLastOrdersID();
   ```
-  10. Recupero i dati degli ordini
+
+9. Recupero i dati degli ordini
   ```c#
     // Istanzio l'oggetto Export dell'AMHelper
     GetDataAM ed = new GetDataAM(AuthKeyAM, wsURL);
@@ -72,7 +66,7 @@ In questo breve tutorial vedremo un esempio su come recuperare i dati degli ordi
     bool RetVal = ed.exp_orders(LastStoredID, ref OrdersData);
   ```
 
-11. Leggo i dati recuperati
+10. Leggo i dati recuperati
   ```c#
   if (RetVal && OrdersData != null)
         {
