@@ -21,6 +21,7 @@ namespace AMHelper.CSV
         public string CHIAVE_PADRE { get; set; }
         public string CONTESTO { get; set; }
         public string COD_EXT { get; set; }
+        public string VISUAL_MASK { get; set; }
         public string POSIZIONE_VALORE { get; set; }
         public string ORDINAMENTO { get; set; }
         public string POSIZIONE_NOME { get; set; }
