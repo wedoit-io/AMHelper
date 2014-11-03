@@ -44,176 +44,221 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_art.cs">
-      <Link>CSV\rec_art.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\exp\rec_exp_clifor.cs">
+      <Link>CSV\exp\rec_exp_clifor.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_articoli_assortimenti.cs">
-      <Link>CSV\rec_articoli_assortimenti.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\exp\rec_exp_clifor_note.cs">
+      <Link>CSV\exp\rec_exp_clifor_note.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_conf.cs">
-      <Link>CSV\rec_art_conf.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\exp\rec_exp_leads.cs">
+      <Link>CSV\exp\rec_exp_leads.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_lang.cs">
-      <Link>CSV\rec_art_lang.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\exp\rec_exp_leads_note.cs">
+      <Link>CSV\exp\rec_exp_leads_note.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_ultacq.cs">
-      <Link>CSV\rec_art_ultacq.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\exp\rec_exp_order.cs">
+      <Link>CSV\exp\rec_exp_order.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_ultven.cs">
-      <Link>CSV\rec_art_ultven.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\ITracciatoRecord.cs">
+      <Link>CSV\imp\ITracciatoRecord.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_art_um.cs">
-      <Link>CSV\rec_art_um.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_agenti.cs">
+      <Link>CSV\imp\rec_agenti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_assortimenti.cs">
-      <Link>CSV\rec_assortimenti.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art.cs">
+      <Link>CSV\imp\rec_art.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_campagne.cs">
-      <Link>CSV\rec_campagne.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_articoli_assortimenti.cs">
+      <Link>CSV\imp\rec_articoli_assortimenti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_canali_vendita.cs">
-      <Link>CSV\rec_canali_vendita.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_conf.cs">
+      <Link>CSV\imp\rec_art_conf.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_catalogo.cs">
-      <Link>CSV\rec_catalogo.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_lang.cs">
+      <Link>CSV\imp\rec_art_lang.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_citta.cs">
-      <Link>CSV\rec_citta.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_ultacq.cs">
+      <Link>CSV\imp\rec_art_ultacq.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_classi_sconto.cs">
-      <Link>CSV\rec_classi_sconto.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_ultven.cs">
+      <Link>CSV\imp\rec_art_ultven.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clienti_assortimenti.cs">
-      <Link>CSV\rec_clienti_assortimenti.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_um.cs">
+      <Link>CSV\imp\rec_art_um.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_age.cs">
-      <Link>CSV\rec_clifor_age.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_assortimenti.cs">
+      <Link>CSV\imp\rec_assortimenti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_blo.cs">
-      <Link>CSV\rec_clifor_blo.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_campagne.cs">
+      <Link>CSV\imp\rec_campagne.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_cate.cs">
-      <Link>CSV\rec_clifor_cate.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_canali_vendita.cs">
+      <Link>CSV\imp\rec_canali_vendita.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_dest.cs">
-      <Link>CSV\rec_clifor_dest.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_catalogo.cs">
+      <Link>CSV\imp\rec_catalogo.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_detcon.cs">
-      <Link>CSV\rec_clifor_detcon.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_citta.cs">
+      <Link>CSV\imp\rec_citta.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_fatt.cs">
-      <Link>CSV\rec_clifor_fatt.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_classi_sconto.cs">
+      <Link>CSV\imp\rec_classi_sconto.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_gen.cs">
-      <Link>CSV\rec_clifor_gen.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clienti_assortimenti.cs">
+      <Link>CSV\imp\rec_clienti_assortimenti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_girovisita.cs">
-      <Link>CSV\rec_clifor_girovisita.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_age.cs">
+      <Link>CSV\imp\rec_clifor_age.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_note.cs">
-      <Link>CSV\rec_clifor_note.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_blo.cs">
+      <Link>CSV\imp\rec_clifor_blo.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_righdoc.cs">
-      <Link>CSV\rec_clifor_righdoc.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_cate.cs">
+      <Link>CSV\imp\rec_clifor_cate.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_scadoc.cs">
-      <Link>CSV\rec_clifor_scadoc.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_dest.cs">
+      <Link>CSV\imp\rec_clifor_dest.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_clifor_testdoc.cs">
-      <Link>CSV\rec_clifor_testdoc.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_detcon.cs">
+      <Link>CSV\imp\rec_clifor_detcon.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_condpag.cs">
-      <Link>CSV\rec_condpag.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_fatt.cs">
+      <Link>CSV\imp\rec_clifor_fatt.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_condpag_lang.cs">
-      <Link>CSV\rec_condpag_lang.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_gen.cs">
+      <Link>CSV\imp\rec_clifor_gen.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_custom_fields.cs">
-      <Link>CSV\rec_custom_fields.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_girovisita.cs">
+      <Link>CSV\imp\rec_clifor_girovisita.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_giacenze.cs">
-      <Link>CSV\rec_giacenze.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_note.cs">
+      <Link>CSV\imp\rec_clifor_note.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_info.cs">
-      <Link>CSV\rec_info.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_righdoc.cs">
+      <Link>CSV\imp\rec_clifor_righdoc.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_leads.cs">
-      <Link>CSV\rec_leads.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_scadoc.cs">
+      <Link>CSV\imp\rec_clifor_scadoc.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_acccrm.cs">
-      <Link>CSV\rec_lead_acccrm.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_testdoc.cs">
+      <Link>CSV\imp\rec_clifor_testdoc.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_accessi.cs">
-      <Link>CSV\rec_lead_accessi.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_condpag.cs">
+      <Link>CSV\imp\rec_condpag.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_detcon.cs">
-      <Link>CSV\rec_lead_detcon.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_condpag_lang.cs">
+      <Link>CSV\imp\rec_condpag_lang.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_note.cs">
-      <Link>CSV\rec_lead_note.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_custom_fields.cs">
+      <Link>CSV\imp\rec_custom_fields.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_righoff.cs">
-      <Link>CSV\rec_lead_righoff.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_giacenze.cs">
+      <Link>CSV\imp\rec_giacenze.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_sconti.cs">
-      <Link>CSV\rec_lead_sconti.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_info.cs">
+      <Link>CSV\imp\rec_info.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_lead_testoff.cs">
-      <Link>CSV\rec_lead_testoff.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_leads.cs">
+      <Link>CSV\imp\rec_leads.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_liste_colori.cs">
-      <Link>CSV\rec_liste_colori.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_acccrm.cs">
+      <Link>CSV\imp\rec_lead_acccrm.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_liste_materiali.cs">
-      <Link>CSV\rec_liste_materiali.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_accessi.cs">
+      <Link>CSV\imp\rec_lead_accessi.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_listini_full.cs">
-      <Link>CSV\rec_listini_full.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_cate.cs">
+      <Link>CSV\imp\rec_lead_cate.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_mod_sped.cs">
-      <Link>CSV\rec_mod_sped.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_concorrenti.cs">
+      <Link>CSV\imp\rec_lead_concorrenti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_nazioni.cs">
-      <Link>CSV\rec_nazioni.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_detcon.cs">
+      <Link>CSV\imp\rec_lead_detcon.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_porto.cs">
-      <Link>CSV\rec_porto.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_fonti.cs">
+      <Link>CSV\imp\rec_lead_fonti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_regole.cs">
-      <Link>CSV\rec_regole.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_interessi.cs">
+      <Link>CSV\imp\rec_lead_interessi.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_reports.cs">
-      <Link>CSV\rec_reports.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_mansioni.cs">
+      <Link>CSV\imp\rec_lead_mansioni.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_sconti.cs">
-      <Link>CSV\rec_sconti.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_mod_acquisizione.cs">
+      <Link>CSV\imp\rec_lead_mod_acquisizione.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_stoart.cs">
-      <Link>CSV\rec_stoart.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_note.cs">
+      <Link>CSV\imp\rec_lead_note.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_assortimenti.cs">
-      <Link>CSV\rec_taglie_assortimenti.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_righoff.cs">
+      <Link>CSV\imp\rec_lead_righoff.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_cataloghi.cs">
-      <Link>CSV\rec_taglie_cataloghi.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_sconti.cs">
+      <Link>CSV\imp\rec_lead_sconti.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_cataloghi_art.cs">
-      <Link>CSV\rec_taglie_cataloghi_art.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_settori.cs">
+      <Link>CSV\imp\rec_lead_settori.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_estensioni.cs">
-      <Link>CSV\rec_taglie_estensioni.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_lead_testoff.cs">
+      <Link>CSV\imp\rec_lead_testoff.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_sviluppi.cs">
-      <Link>CSV\rec_taglie_sviluppi.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_liste_colori.cs">
+      <Link>CSV\imp\rec_liste_colori.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_taglie_sviluppi_art.cs">
-      <Link>CSV\rec_taglie_sviluppi_art.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_liste_materiali.cs">
+      <Link>CSV\imp\rec_liste_materiali.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_valute.cs">
-      <Link>CSV\rec_valute.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_listini_full.cs">
+      <Link>CSV\imp\rec_listini_full.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\rec_var_combinazioni.cs">
-      <Link>CSV\rec_var_combinazioni.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_mod_sped.cs">
+      <Link>CSV\imp\rec_mod_sped.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_nazioni.cs">
+      <Link>CSV\imp\rec_nazioni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_porto.cs">
+      <Link>CSV\imp\rec_porto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_regole.cs">
+      <Link>CSV\imp\rec_regole.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_reports.cs">
+      <Link>CSV\imp\rec_reports.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_sconti.cs">
+      <Link>CSV\imp\rec_sconti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_stoart.cs">
+      <Link>CSV\imp\rec_stoart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_assortimenti.cs">
+      <Link>CSV\imp\rec_taglie_assortimenti.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_cataloghi.cs">
+      <Link>CSV\imp\rec_taglie_cataloghi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_cataloghi_art.cs">
+      <Link>CSV\imp\rec_taglie_cataloghi_art.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_estensioni.cs">
+      <Link>CSV\imp\rec_taglie_estensioni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_sviluppi.cs">
+      <Link>CSV\imp\rec_taglie_sviluppi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_sviluppi_art.cs">
+      <Link>CSV\imp\rec_taglie_sviluppi_art.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_valute.cs">
+      <Link>CSV\imp\rec_valute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_var_combinazioni.cs">
+      <Link>CSV\imp\rec_var_combinazioni.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\NomiTracciati.cs">
+      <Link>CSV\NomiTracciati.cs</Link>
     </Compile>
     <Compile Include="..\..\net20\AMHelper\WS\GetDataAM.cs">
       <Link>WS\GetDataAM.cs</Link>

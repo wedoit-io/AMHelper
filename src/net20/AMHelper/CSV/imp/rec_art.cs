@@ -11,6 +11,9 @@ using System.Text;
 namespace AMHelper.CSV
 {
 
+
+    //  : ITracciatoRecord
+    //[NomeTracciato("nome_file.dat")]
     public class rec_art
     {
         // CHIAVE|COD_DITTA|COD_ART|DES_ART|COD_FAM|DES_FAM|COD_SFAM|DES_SFAM|COD_GRUPPO1|DES_GRUPPO1|COD_GRUPPO2|DES_GRUPPO2|UM1|UM2|FATTORE_CONVERSIONE|DES_GR_STAT1|DES_GR_STAT2|QTA_MIN_VEND|COD_CLASSE_SCONTO|COD_DEPERIBILITA|PREZZO_MIN_VEN|SCONTO_MAX_VEN|MAX_EXTRA_SCONTO|DAT_ULT_MOD
@@ -40,5 +43,8 @@ namespace AMHelper.CSV
         public string COD_SVILUPPO_BASE { get; set; }
         public string DAT_ULT_MOD { get; set; }
 
+        //public string Nome { get { return "nomefile.dat";  } }
     }
+
+    
 }

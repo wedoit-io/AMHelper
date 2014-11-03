@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using AMHelper.WS;
+using AMHelper.CSV;
 
 
 namespace AMHelperSample
@@ -12,6 +13,23 @@ namespace AMHelperSample
         {
             ExpOrders();
 
+            /*
+            var nomiTracciati = new Dictionary<Type, string>
+            {
+                { typeof(ws_rec_clifor), "nome_file.dat" },
+                { typeof(ws_rec_leads), "nome_file.dat" },
+                { typeof(ws_rec_clifor), "nome_file.dat" },
+                { typeof(ws_rec_clifor), "nome_file.dat" },
+
+            };
+
+            var nomeTracciatoDiCliFor = nomiTracciati[typeof(ws_rec_clifor)];
+
+
+            */
+
+            var nome_rec_art = Tracciati.NomeFile[typeof(rec_art)];
+            
         }
 
 
