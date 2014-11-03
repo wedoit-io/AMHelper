@@ -33,6 +33,8 @@ namespace AMHelper.WS
 
         // Località
         public string indirizzo { get; set; }
+
+        public string cod_citta { get; set; }
         public string citta { get; set; }
         public string cap { get; set; }
         public string provincia { get; set; }
