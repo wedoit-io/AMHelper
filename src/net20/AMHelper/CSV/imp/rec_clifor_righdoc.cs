@@ -18,6 +18,7 @@ namespace AMHelper.CSV
         public string NUM_REG { get; set; }
         public string DATA_DOC { get; set; }
         public string PRG_RIGA { get; set; }
+        public string COD_ART { get; set; }
         public string COD_RIGA { get; set; }
         public string DES_RIGA { get; set; }
         public string COD_UM { get; set; }
