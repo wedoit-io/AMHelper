@@ -28,8 +28,7 @@ namespace AMHelperSample
 
             */
 
-            var nome_rec_art = Tracciati.NomeFile[typeof(rec_art)];
-            
+            var nome_rec_art = Tracciati.NomeFile[typeof(rec_art)];   
         }
 
 
@@ -42,8 +41,8 @@ namespace AMHelperSample
                 //string AuthKeyLM = "LMKEY2";
                 //string AuthKeyAM = "AMKEY2";
 
-                string AuthKeyLM = "3818B678-8333-4DAE-9636-44142316F424";
-                string AuthKeyAM = "DDC4C5C1-072F-41D8-A728-D8E4BA686588";
+                string AuthKeyLM = "41AF11C0-36C9-4C16-8BAF-83B033B959CA";
+                string AuthKeyAM = "D7BC91F0-300A-41C3-B2AA-9BE3067BF330";
                 bool ProxyEnable = false;
                 bool Produzione =  true;
 
@@ -54,9 +53,6 @@ namespace AMHelperSample
                 int ProxyPort = 8081;
                 int LastStoredID = 1;
 
-
-
-
                 // http://am.apexnet.it/api_fwco/v1/progetti/wt.fwco/exportPaginazione/codaOrdini?authKey=43450611-EA2D-4CE8-B1FF-B2EB7C42114A&offset=0&limit=10&count=0&lastID=1490
                 // Dove è situato il mio AM ?
                 GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
@@ -65,23 +61,23 @@ namespace AMHelperSample
                 {
                     lmdata.HttpProxyAutentication(ProxyUser, ProxyPassword, ProxyHost, ProxyPort);
                 }
-                    
 
 
                 // Quali dati contiene il mio AM ?
                 ws_rec_lmparam AMData = null;
                 bool lmRetVal = lmdata.get_am_par(ref AMData);
+                
+                bool retRelease = lmdata.send_release("1.0");
 
 
- 
                 string wsURL = AMData.url_am_api ;
-
-
-
+                
+                string CodProgetto = AMData.cod_prog;
+                
+        
 
                 // Leggo l'ID dell'ultimo ordine recuperato dal WS. Se è la prima volta tornerà 0 (zero)
 
-               
                 //int LastStoredID = 12484;
                 // Istanzio l'oggetto Export dell'AMHelper
                 GetDataAM ed = new GetDataAM(AuthKeyAM, wsURL);
