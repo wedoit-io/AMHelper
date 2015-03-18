@@ -10,6 +10,20 @@ using System.Text;
 
 namespace AMHelper.CSV
 {
+    public class rec_multimedia
+    {
+        // NOMEFILE|TITOLO|COD_ART|L1|L2|L3|L4|DAT_ULT_MOD
+        public string NOMEFILE { get; set; }
+        public string TITOLO { get; set; }
+        public string COD_ART { get; set; }
+        public string L1 { get; set; }
+        public string L2 { get; set; }
+        public string L3 { get; set; }
+        public string L4 { get; set; }
+        public string DAT_ULT_MOD { get; set; }
+    }
+
+    [Obsolete("Metodo deprecato. Sostituito da rec_multimedia")]
     public class rec_catalogo
     {
         // NOMEFILE|TITOLO|COD_ART|L1|L2|L3|L4|DAT_ULT_MOD
@@ -21,6 +35,5 @@ namespace AMHelper.CSV
         public string L3 { get; set; }
         public string L4 { get; set; }
         public string DAT_ULT_MOD { get; set; }
-
     }
 }

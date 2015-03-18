@@ -19,6 +19,6 @@ namespace AMHelper.CSV
         public string COD_TAGLIA { get; set; }
         public string QUANTITA { get; set; }
         public string DAT_ULT_MOD { get; set; }
-
     }
+
 }

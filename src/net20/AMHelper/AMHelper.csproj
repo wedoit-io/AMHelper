@@ -29,8 +29,8 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\..\..\bin\lib\2.0\</OutputPath>
+    <DefineConstants>TRACE;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -38,11 +38,11 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.4.5.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="NewtonsoftApex.Json">
+      <HintPath>..\..\packages\RestSharpApex.1.0\lib\2.0\NewtonsoftApex.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp.Net2">
-      <HintPath>..\..\packages\RestSharp.Net2.1.1.11\lib\net20\RestSharp.Net2.dll</HintPath>
+    <Reference Include="RestSharpApex.Net2">
+      <HintPath>..\..\packages\RestSharpApex.1.0\lib\2.0\RestSharpApex.Net2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -54,6 +54,9 @@
     <Compile Include="CSV\exp\rec_exp_leads.cs" />
     <Compile Include="CSV\exp\rec_exp_clifor_note.cs" />
     <Compile Include="CSV\imp\ITracciatoRecord.cs" />
+    <Compile Include="CSV\imp\rec_cataloghi_agente.cs" />
+    <Compile Include="CSV\imp\rec_multimedia.cs" />
+    <Compile Include="CSV\imp\rec_cataloghi.cs" />
     <Compile Include="CSV\NomiTracciati.cs" />
     <Compile Include="CSV\imp\rec_art.cs" />
     <Compile Include="CSV\imp\rec_articoli_assortimenti.cs" />
@@ -66,7 +69,6 @@
     <Compile Include="CSV\imp\rec_campagne.cs" />
     <Compile Include="CSV\imp\rec_canali_vendita.cs" />
     <Compile Include="CSV\exp\rec_exp_order.cs" />
-    <Compile Include="CSV\imp\rec_catalogo.cs" />
     <Compile Include="CSV\imp\rec_citta.cs" />
     <Compile Include="CSV\imp\rec_classi_sconto.cs" />
     <Compile Include="CSV\imp\rec_clienti_assortimenti.cs" />
@@ -114,8 +116,7 @@
     <Compile Include="CSV\imp\rec_sconti.cs" />
     <Compile Include="CSV\imp\rec_stoart.cs" />
     <Compile Include="CSV\imp\rec_taglie_assortimenti.cs" />
-    <Compile Include="CSV\imp\rec_taglie_cataloghi.cs" />
-    <Compile Include="CSV\imp\rec_taglie_cataloghi_art.cs" />
+    <Compile Include="CSV\imp\rec_cataloghi_art.cs" />
     <Compile Include="CSV\imp\rec_taglie_estensioni.cs" />
     <Compile Include="CSV\imp\rec_taglie_sviluppi.cs" />
     <Compile Include="CSV\imp\rec_taglie_sviluppi_art.cs" />
@@ -131,6 +132,9 @@
     <Compile Include="WS\ws_rec_leads.cs" />
     <Compile Include="WS\ws_rec_leads_note.cs" />
     <Compile Include="WS\ws_rec_orders.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

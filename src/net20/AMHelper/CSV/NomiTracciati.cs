@@ -52,6 +52,8 @@ namespace AMHelper.CSV
                     { typeof(rec_sconti), "io_sconti.dat" },
                     { typeof(rec_valute), "io_valute.dat" },
                     { typeof(rec_taglie_assortimenti), "io_taglie_assortimenti.dat" },
+                    { typeof(rec_cataloghi), "io_cataloghi.dat" },
+                    { typeof(rec_cataloghi_art), "io_cataloghi_art.dat" },
                     { typeof(rec_taglie_cataloghi), "io_taglie_cataloghi.dat" },
                     { typeof(rec_taglie_cataloghi_art), "io_taglie_cataloghi_art.dat" },
                     { typeof(rec_taglie_estensioni), "io_taglie_estensioni.dat" },
@@ -75,6 +77,7 @@ namespace AMHelper.CSV
                     { typeof(rec_lead_mansioni), "io_lead_mansioni.dat" },
                     { typeof(rec_agenti), "io_agenti.dat" },
                     { typeof(rec_catalogo), "io_catalogo.dat" },
+                    { typeof(rec_multimedia), "io_multimedia.dat" },
                     { typeof(rec_reports), "io_reports.dat" },
 
                     { typeof(rec_exp_order), "AM_ORD_{0}_{1}.DAT" },

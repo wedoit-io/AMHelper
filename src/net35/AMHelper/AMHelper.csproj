@@ -27,8 +27,8 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\..\..\bin\lib\3.5\</OutputPath>
+    <DefineConstants>TRACE;NET35</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -95,8 +95,14 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_canali_vendita.cs">
       <Link>CSV\imp\rec_canali_vendita.cs</Link>
     </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_catalogo.cs">
-      <Link>CSV\imp\rec_catalogo.cs</Link>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_cataloghi.cs">
+      <Link>CSV\imp\rec_cataloghi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_cataloghi_agente.cs">
+      <Link>CSV\imp\rec_cataloghi_agente.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_cataloghi_art.cs">
+      <Link>CSV\imp\rec_cataloghi_art.cs</Link>
     </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_citta.cs">
       <Link>CSV\imp\rec_citta.cs</Link>
@@ -215,6 +221,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_mod_sped.cs">
       <Link>CSV\imp\rec_mod_sped.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_multimedia.cs">
+      <Link>CSV\imp\rec_multimedia.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_nazioni.cs">
       <Link>CSV\imp\rec_nazioni.cs</Link>
     </Compile>
@@ -235,12 +244,6 @@
     </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_assortimenti.cs">
       <Link>CSV\imp\rec_taglie_assortimenti.cs</Link>
-    </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_cataloghi.cs">
-      <Link>CSV\imp\rec_taglie_cataloghi.cs</Link>
-    </Compile>
-    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_cataloghi_art.cs">
-      <Link>CSV\imp\rec_taglie_cataloghi_art.cs</Link>
     </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_estensioni.cs">
       <Link>CSV\imp\rec_taglie_estensioni.cs</Link>

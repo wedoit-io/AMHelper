@@ -4,10 +4,15 @@ using System.Net;
 //using System.Collections.IEnumerable;
 using System.Text;
 using System.IO;
-using RestSharp;
+
 
 #if NET20
-  using Newtonsoft.Json;
+  using RestSharpApex;
+  using NewtonsoftApex.Json;
+#endif
+
+#if NET35 || NET40
+  using RestSharp;
 #endif
 
 //using RestSharp.Serializers;

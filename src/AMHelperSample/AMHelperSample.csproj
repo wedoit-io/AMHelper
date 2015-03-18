@@ -34,13 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AMHelper">
-      <HintPath>\\psf\Work\iOrder\AMHelper\bin\lib\2.0\AMHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>\\psf\Work\iOrder\AMHelper\bin\lib\2.0\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp.Net2">
-      <HintPath>\\psf\Work\iOrder\AMHelper\bin\lib\2.0\RestSharp.Net2.dll</HintPath>
+      <HintPath>..\..\bin\lib\2.0\AMHelper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -49,9 +43,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

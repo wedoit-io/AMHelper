@@ -10,6 +10,20 @@ using System.Text;
 
 namespace AMHelper.CSV
 {
+    public class rec_cataloghi
+    {
+        // CHIAVE|COD_DITTA|COD_CATALOGO|DES_CATALOGO|DAT_ULT_MOD
+        public string CHIAVE { get; set; }
+        public string COD_DITTA { get; set; }
+        public string COD_CATALOGO { get; set; }
+        public string DES_CATALOGO { get; set; }
+        public string SCONTO_MAX { get; set; }
+        public string FLG_MOD_PREZZO { get; set; }
+        public string FLG_MOD_SCONTI { get; set; }
+        public string DAT_ULT_MOD { get; set; }
+    }
+
+    [Obsolete("Deprecato. Sostituito da rec_cataloghi")]
     public class rec_taglie_cataloghi
     {
         // CHIAVE|COD_DITTA|COD_CATALOGO|DES_CATALOGO|DAT_ULT_MOD
@@ -20,4 +34,5 @@ namespace AMHelper.CSV
         public string SCONTO_MAX { get; set; }
         public string DAT_ULT_MOD { get; set; }
     }
+
 }
