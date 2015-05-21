@@ -6,8 +6,8 @@ using System.Text;
 using System.IO;
 
 #if NET20
-  using RestSharpApex;
-  using NewtonsoftApex.Json;
+using RestSharpApex;
+using NewtonsoftApex.Json;
 #endif
 
 #if NET35 || NET40
@@ -43,7 +43,7 @@ namespace AMHelper.WS
     public class GetDataLM
     {
 
-     
+
 
         // private string _ParamUrl;
         // private string _InfoMessage;
@@ -82,7 +82,7 @@ namespace AMHelper.WS
                 _ProxyPort = value;
             }
         }
-        private string ProxyUser    
+        private string ProxyUser
         {
             get
             {
@@ -93,7 +93,7 @@ namespace AMHelper.WS
                 _ProxyUser = value;
             }
         }
-        private string ProxyPassword    
+        private string ProxyPassword
         {
             get
             {
@@ -110,7 +110,7 @@ namespace AMHelper.WS
         private bool _Production;
 
         // Property AuthKey
-        private string AuthKeyLM    
+        private string AuthKeyLM
         {
             get
             {
@@ -157,7 +157,7 @@ namespace AMHelper.WS
         public bool get_am_par(ref ws_rec_lmparam AMData)
         {
             string ServiceUrl = "";
-  
+
 
             if (Production)
             {
@@ -170,12 +170,12 @@ namespace AMHelper.WS
 
             try
             {
-                
+
                 var client = new RestClient(ServiceUrl);
 
                 if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
-                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);  
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
                 }
 
@@ -201,7 +201,7 @@ namespace AMHelper.WS
                     throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
-#if NET20 
+#if NET20
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_lmparam>(response.Content);
 #endif
 
@@ -218,7 +218,7 @@ namespace AMHelper.WS
                     _CodProgetto = AMData.cod_prog;
                     AMData.url_am_api = AMData.url_am_api + "/" + AMData.cod_prog;
                 }
-          
+
 
             }
             catch (Exception ex)
@@ -232,7 +232,7 @@ namespace AMHelper.WS
         public bool send_release(string Release)
         {
             string ServiceUrl;
-            
+
             if (Production)
             {
                 ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/update_versione_connettore";
@@ -248,7 +248,7 @@ namespace AMHelper.WS
 
                 if (!String.IsNullOrEmpty(this._ProxyUser))
                 {
-                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);  
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
                     client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
                 }
 
@@ -267,5 +267,81 @@ namespace AMHelper.WS
             return true;
         }
 
+
+        public bool send_push_notification_by_agent(string pCodAgente, string pMessaggio)
+        {
+            string ServiceUrl;
+
+            if (Production)
+            {
+                ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/notifica_push_send";
+            }
+            else
+            {
+                ServiceUrl = @"http://test.apexnet.it/licenseManagerAPI/v1/notifica_push_send";
+            }
+
+            try
+            {
+                var client = new RestClient(ServiceUrl);
+
+                if (!String.IsNullOrEmpty(this._ProxyUser))
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
+                var request = new RestRequest("/", Method.POST);
+
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(new { CodiceProgetto = _CodProgetto, CodiceAgente = pCodAgente, Messaggio = pMessaggio });
+                var response = client.Execute(request);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("send_push_notification: " + ex.Message, ex);
+            }
+
+            return true;
+        }
+
+        public bool send_push_notification_by_username(string pUsername, string pMessaggio)
+        {
+            string ServiceUrl;
+
+            if (Production)
+            {
+                ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/notifica_push_send_by_username";
+            }
+            else
+            {
+                ServiceUrl = @"http://test.apexnet.it/licenseManagerAPI/v1/notifica_push_send_by_username";
+            }
+
+            try
+            {
+                var client = new RestClient(ServiceUrl);
+
+                if (!String.IsNullOrEmpty(this._ProxyUser))
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
+                var request = new RestRequest("/", Method.POST);
+
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(new { CodiceProgetto = _CodProgetto, Username = pUsername, Messaggio = pMessaggio });
+                var response = client.Execute(request);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("notifica_push_send_by_username: " + ex.Message, ex);
+            }
+
+            return true;
+        }
     }
 }

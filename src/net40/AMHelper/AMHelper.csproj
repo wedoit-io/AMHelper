@@ -263,6 +263,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\NomiTracciati.cs">
       <Link>CSV\NomiTracciati.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\FieldFormatter.cs">
+      <Link>FieldFormatter.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\WS\GetDataAM.cs">
       <Link>WS\GetDataAM.cs</Link>
     </Compile>

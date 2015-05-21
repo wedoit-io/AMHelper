@@ -9,64 +9,67 @@ namespace AMHelperSample
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            ExpOrders();
+            //SendNotificationByAgent_Sample();
 
-            /*
-            var nomiTracciati = new Dictionary<Type, string>
-            {
-                { typeof(ws_rec_clifor), "nome_file.dat" },
-                { typeof(ws_rec_leads), "nome_file.dat" },
-                { typeof(ws_rec_clifor), "nome_file.dat" },
-                { typeof(ws_rec_clifor), "nome_file.dat" },
+            SendNotificationByUserName_Sample();
 
-            };
+            //GetOrders_Sample();
 
-            var nomeTracciatoDiCliFor = nomiTracciati[typeof(ws_rec_clifor)];
-
-
-            */
-
-            var nome_rec_art = Tracciati.NomeFile[typeof(rec_art)];   
         }
 
 
-        static void ExpOrders()
+        static void GetOrders_Sample()
         {
 
             try
             {
-                // Chiavi
-                //string AuthKeyLM = "LMKEY2";
-                //string AuthKeyAM = "AMKEY2";
+                // Impostare le chiavi di autorizzazione
+                string AuthKeyLM = "3405D863-C49C-4D4B-B1FF-35D6231C61D9";
+                string AuthKeyAM = "FDFC769C-E950-4067-B4FF-0F3A134FB94B";
 
-                string AuthKeyLM = "41AF11C0-36C9-4C16-8BAF-83B033B959CA";
-                string AuthKeyAM = "D7BC91F0-300A-41C3-B2AA-9BE3067BF330";
-                bool ProxyEnable = false;
+                // Impostare true per l'utilizzo dei server di produzione (default)
+                // false consente l'utilizzo di server di test (solo ad uso interno)
                 bool Produzione =  true;
 
-                // ===========================================
+                // Impostazioni da usare solo se si è sotto proxy
+                // ----------------------------------------------
                 string ProxyUser = "teo";
                 string ProxyPassword = "gigi";
                 string ProxyHost = "192.168.10.134";
                 int ProxyPort = 8081;
-                int LastStoredID = 1;
+                bool ProxyEnable = false;
+                // ----------------------------------------------
 
-                // http://am.apexnet.it/api_fwco/v1/progetti/wt.fwco/exportPaginazione/codaOrdini?authKey=43450611-EA2D-4CE8-B1FF-B2EB7C42114A&offset=0&limit=10&count=0&lastID=1490
+
+                // Quale è l'ultimo ID Ordine che è stato elaborato ?
+                // Questo dato, che qui è impostato a un valore fisso, deve essere recuperato da una tabella
+                // in cui il programma deve memorizzare l'ultimo ID ordine che è stato acquisito
+                int LastStoredID = 30;
+
                 // Dove è situato il mio AM ?
+                // Per prima cosa viene chiamato il License Manager (con l'opportuna chiave di autenticazione).
                 GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
 
+                // Devo impostare un proxy ?
+                // Se ProxyEnable = true prevedo l'utilizzo del proxy
                 if (ProxyEnable)
                 {
                     lmdata.HttpProxyAutentication(ProxyUser, ProxyPassword, ProxyHost, ProxyPort);
                 }
 
 
-                // Quali dati contiene il mio AM ?
+                // Quali sono i dati per il collegamento all'AppManager ?
+                // Grazie all'oggetto fornito dal License Manager, recupero i dati dei parametri dell'AppManagere mi faccio restituire
+                // la struttura dei dati (se ce ne sono
                 ws_rec_lmparam AMData = null;
                 bool lmRetVal = lmdata.get_am_par(ref AMData);
                 
+                // Che versione di connettore sto usando ?
+                // Per tenere una traccia centralizzata delle versioni dei connettori, è possibile inviare al server
+                // la versione del proprio connettore.
                 bool retRelease = lmdata.send_release("1.0");
 
 
@@ -74,7 +77,7 @@ namespace AMHelperSample
                 
                 string CodProgetto = AMData.cod_prog;
                 
-        
+           
 
                 // Leggo l'ID dell'ultimo ordine recuperato dal WS. Se è la prima volta tornerà 0 (zero)
 
@@ -139,5 +142,42 @@ namespace AMHelperSample
 
         }
 
+        static void SendNotificationByAgent_Sample()
+        {
+            // notifica_push_send_by_username
+            // Impostare le chiavi di autorizzazione
+            string AuthKeyLM = "41AF11C0-36C9-4C16-8BAF-83B033B959CA";
+            // string AuthKeyAM = "FDFC769C-E950-4067-B4FF-0F3A134FB94B";
+
+            // Impostare true per l'utilizzo dei server di produzione (default)
+            // false consente l'utilizzo di server di test (solo ad uso interno)
+            bool Produzione =  true;
+
+            GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
+
+            ws_rec_lmparam AMData = null;
+            bool lmRetVal = lmdata.get_am_par(ref AMData);
+
+            bool retRelease = lmdata.send_push_notification_by_agent("8", "Test");
+        }
+
+        static void SendNotificationByUserName_Sample()
+        {
+            // notifica_push_send_by_username
+            // Impostare le chiavi di autorizzazione
+            string AuthKeyLM = "41AF11C0-36C9-4C16-8BAF-83B033B959CA";
+            // string AuthKeyAM = "FDFC769C-E950-4067-B4FF-0F3A134FB94B";
+
+            // Impostare true per l'utilizzo dei server di produzione (default)
+            // false consente l'utilizzo di server di test (solo ad uso interno)
+            bool Produzione = true;
+
+            GetDataLM lmdata = new GetDataLM(AuthKeyLM, Produzione);
+
+            ws_rec_lmparam AMData = null;
+            bool lmRetVal = lmdata.get_am_par(ref AMData);
+
+            bool retRelease = lmdata.send_push_notification_by_username("admin", "Test");
+        }
     }
 }
