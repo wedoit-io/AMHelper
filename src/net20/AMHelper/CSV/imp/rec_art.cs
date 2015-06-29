@@ -31,6 +31,8 @@ namespace AMHelper.CSV
         public string DES_GRUPPO2 { get; set; }
         public string UM1 { get; set; }
         public string UM2 { get; set; }
+        public string COD_STATO { get; set; }
+        public string DES_STATO { get; set; }
         public string FATTORE_CONVERSIONE { get; set; }
         public string DES_GR_STAT1 { get; set; }
         public string DES_GR_STAT2 { get; set; }
@@ -40,6 +42,10 @@ namespace AMHelper.CSV
         public string PREZZO_MIN_VEN { get; set; }
         public string SCONTO_MAX_VEN { get; set; }
         public string MAX_EXTRA_SCONTO { get; set; }
+        public string PREZZO_RETAIL { get; set; }
+        public string DES_FILTRO1 { get; set; }
+        public string DES_FILTRO2 { get; set; }
+        public string DES_FILTRO3 { get; set; }
         public string COD_SVILUPPO_BASE { get; set; }
         public string DAT_ULT_MOD { get; set; }
 
