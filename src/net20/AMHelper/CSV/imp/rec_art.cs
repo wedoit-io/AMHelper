@@ -145,7 +145,7 @@ namespace AMHelper.CSV
         /// Flag che identifica la possibilità di modificare l'unità di misura di default in fase di inserimento ordine
         /// Valori consentiti: 0 = Modificabile (default), -1 = Non modificabile
         /// </summary>
-        public string FLG_MOD_UM_DEFAULT { get; set; }
+        public string FLG_LOCK_UM_DEFAULT { get; set; }
         /// <summary>
         /// Data di ultima modifica del record
         /// </summary>
