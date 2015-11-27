@@ -55,6 +55,7 @@ namespace AMHelper.CSV
         /// Flag che identifica l'unità di misura di default, ovvero quella che deve essere proposta quando si inserisce un nuovo ordine.
         /// In molti gestionali è chiamata unità di misura di Vendita. 
         /// Valori consentiti: 0 = Normale (default), -1 = Predefinita
+        /// IMPORTANTE: Per ogni COD_ART deve sempre esistere una riga che ha questo flag a -1
         /// </summary>
         public string FLG_DEFAULT { get; set; }
         /// <summary>
