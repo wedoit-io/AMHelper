@@ -19,6 +19,9 @@ namespace AMHelper.CSV
         public string COD_CLIFOR { get; set; }
         public string ANNO { get; set; }
         public string MESE { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
         public string COD_VALUTA { get; set; }
         public string FATTURATO { get; set; }
         public string DAT_ULT_MOD { get; set; }
