@@ -31,6 +31,9 @@ namespace AMHelper.CSV
         public string DATA_DOC { get; set; }
         public string NUM_DOC { get; set; }
         public string DES_SCAD { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
         public string COD_VALUTA { get; set; }
         public string DAT_ULT_MOD { get; set; }
                

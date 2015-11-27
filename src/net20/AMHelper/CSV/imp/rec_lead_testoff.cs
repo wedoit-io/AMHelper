@@ -45,6 +45,9 @@ namespace AMHelper.CSV
         public string EVASO { get; set; }
         public string ANNULLATO { get; set; }
         public string CHIUSO { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
         public string COD_VALUTA { get; set; }
         public string TOTALE_OFFERTA { get; set; }
         public string DAT_ULT_MOD { get; set; }
