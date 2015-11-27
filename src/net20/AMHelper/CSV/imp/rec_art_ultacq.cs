@@ -12,18 +12,19 @@ namespace AMHelper.CSV
 {
     public class rec_art_ultacq
     {
-        // CHIAVE|COD_DITTA|COD_ART|PROG|VALUTA|PRZ|DATA_DOC|NUM_DOC|COD_CLFOR|TIPO_DOC|DAT_ULT_MOD
+        // CHIAVE|COD_DITTA|COD_ART|PROG|VALUTA|PRZ|DATA_DOC|NUM_DOC|COD_CLFOR|DAT_ULT_MOD
         public string CHIAVE { get; set; }
         public string COD_DITTA { get; set; }
         public string COD_ART { get; set; }
         public string PROG { get; set; }
-        public string VALUTA { get; set; }
         public string PRZ { get; set; }
         public string DATA_DOC { get; set; }
         public string NUM_DOC { get; set; }
         public string COD_CLFOR { get; set; }
-        public string TIPO_DOC { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
+        public string COD_VALUTA { get; set; }
         public string DAT_ULT_MOD { get; set; }
-
     }
 }

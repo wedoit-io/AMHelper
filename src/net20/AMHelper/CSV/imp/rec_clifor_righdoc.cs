@@ -23,6 +23,9 @@ namespace AMHelper.CSV
         public string DES_RIGA { get; set; }
         public string COD_UM { get; set; }
         public string QTA { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
         public string COD_VALUTA { get; set; }
         public string PRZ_LORDO { get; set; }
         public string PRZ_NETTO { get; set; }
