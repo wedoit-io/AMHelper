@@ -68,6 +68,9 @@ namespace AMHelper.CSV
         public string IND_GES_MAG_IMP { get; set; }
         public string FLG_ESCLUDI_SCONTI { get; set; }
         public string COD_COMBINAZIONE { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
         public string COD_VALUTA { get; set; }
         public string COD_CATALOGO { get; set; }
         public string COD_MATERIALE_COMB { get; set; }
