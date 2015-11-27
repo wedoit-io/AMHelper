@@ -39,6 +39,10 @@ namespace AMHelper.CSV
         public string ULT_MAG_PER2 { get; set; }
         public string ULT_MAG_IMPORTO { get; set; }
         public string ULT_DATA { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
+        public string COD_VALUTA { get; set; }
         public string DAT_ULT_MOD { get; set; }
 
     }
