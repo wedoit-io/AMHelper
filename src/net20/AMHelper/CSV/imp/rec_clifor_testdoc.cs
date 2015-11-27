@@ -19,7 +19,6 @@ namespace AMHelper.CSV
         public string COD_CLIFOR { get; set; }
         public string COD_TIPODOC { get; set; }
         public string COD_STIPODOC { get; set; }
-        public string FLGDAEVADERE { get; set; }
         public string NUMREG { get; set; }
         public string TIPODOC { get; set; }
         public string TIPO { get; set; }
@@ -32,7 +31,9 @@ namespace AMHelper.CSV
         public string DATA_DOC { get; set; }
         public string DOCORIG { get; set; }
         public string DEPOSITO { get; set; }
-        public string VALUTA { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
         public string COD_VALUTA { get; set; }
         public string TOTALEDOC { get; set; }
         public string DATACONS { get; set; }
@@ -45,6 +46,7 @@ namespace AMHelper.CSV
         public string DATA_CONSEGNA { get; set; }
         public string DAT_ULT_MOD { get; set; }
 
+        /*
 
         [Obsolete("Deprecato. Eliminare")]
         public string DATA_CONFERMA { get; set; }
@@ -57,7 +59,7 @@ namespace AMHelper.CSV
 
         [Obsolete("Deprecato. Utilizzare DATA_DOC")]
         public string DATADOC { get; set; }
-
+        */
     }
 
 }
