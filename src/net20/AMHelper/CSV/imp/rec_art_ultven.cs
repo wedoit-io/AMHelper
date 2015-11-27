@@ -17,12 +17,14 @@ namespace AMHelper.CSV
         public string COD_DITTA { get; set; }
         public string COD_ART { get; set; }
         public string PROG { get; set; }
-        public string VALUTA { get; set; }
         public string PRZ { get; set; }
         public string DATA_DOC { get; set; }
         public string NUM_DOC { get; set; }
         public string COD_CLFOR { get; set; }
+        /// <summary>
+        /// Codice della Valuta
+        /// </summary>
+        public string COD_VALUTA { get; set; }
         public string DAT_ULT_MOD { get; set; }
-
     }
 }
