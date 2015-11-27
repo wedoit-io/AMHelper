@@ -142,7 +142,8 @@ namespace AMHelper.CSV
         /// </summary>
         public string COD_SVILUPPO_BASE { get; set; }
         /// <summary>
-        /// Flag che identifica la possibilità di modificare l'unità di misura di default in fase di inserimento ordine
+        /// Flag che identifica la possibilità, per l'utente, di modificare l'unità di misura 
+        /// di default (FLG_DEFAULT di io_art_um.dat), in fase di inserimento ordine
         /// Valori consentiti: 0 = Modificabile (default), -1 = Non modificabile
         /// </summary>
         public string FLG_LOCK_UM_DEFAULT { get; set; }
