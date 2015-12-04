@@ -10,19 +10,28 @@ using System.Text;
 
 namespace AMHelper.CSV
 {
-    public class rec_campagne
+
+    public class rec_campagne_operatore
     {
         /// <summary>
-        /// Chiave univoca del record generata dai dati di origine
+        /// Chiave univoca del record
         /// </summary>
         public string CHIAVE { get; set; }
         /// <summary>
-        /// Codice della ditta. E' il codice che identifica univocamente una ditta dentro il gestionale che, nel caso sia multisocietario, porebbe contenere dati di più aziende
+        /// Codice della ditta
         /// </summary>
         public string COD_DITTA { get; set; }
+        /// <summary>
+        /// Codice della campagna marketing
+        /// </summary>
         public string COD_CAMPAGNA { get; set; }
-        public string DES_CAMPAGNA { get; set; }
+        /// <summary>
+        ///  Codice dell'operatore associato alla campagna marketing
+        /// </summary>
+        public string COD_OPERATORE { get; set; }
+        /// <summary>
+        /// Data di ultima modifica del record
+        /// </summary>
         public string DAT_ULT_MOD { get; set; }
-
     }
 }

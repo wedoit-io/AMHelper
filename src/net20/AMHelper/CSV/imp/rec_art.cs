@@ -16,13 +16,12 @@ namespace AMHelper.CSV
     //[NomeTracciato("nome_file.dat")]
     public class rec_art
     {
-        // CHIAVE|COD_DITTA|COD_ART|DES_ART|COD_FAM|DES_FAM|COD_SFAM|DES_SFAM|COD_GRUPPO1|DES_GRUPPO1|COD_GRUPPO2|DES_GRUPPO2|UM1|UM2|FATTORE_CONVERSIONE|DES_GR_STAT1|DES_GR_STAT2|QTA_MIN_VEND|COD_CLASSE_SCONTO|COD_DEPERIBILITA|PREZZO_MIN_VEN|SCONTO_MAX_VEN|MAX_EXTRA_SCONTO|DAT_ULT_MOD
         /// <summary>
-        /// Chiave univoca del record ereditata dai dati di origine
+        /// Chiave univoca del record generata dai dati di origine
         /// </summary>
         public string CHIAVE { get; set; }
         /// <summary>
-        /// Codice della ditta. E' il codice che identifica univocamente una ditta dentro il gestionale che, nel caso sia multisocietario, può contenere dati di più aziende
+        /// Codice della ditta. E' il codice che identifica univocamente una ditta dentro il gestionale che, nel caso sia multisocietario, porebbe contenere dati di più aziende
         /// </summary>
         public string COD_DITTA { get; set; }
         /// <summary>
@@ -153,7 +152,13 @@ namespace AMHelper.CSV
         public string DAT_ULT_MOD { get; set; }
 
         //public string Nome { get { return "nomefile.dat";  } }
+
+        /*
+        public string GetFileName()
+        {
+            return "nomefile.dat";
+        }
+         */
     }
 
-    
 }

@@ -92,6 +92,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_campagne.cs">
       <Link>CSV\imp\rec_campagne.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_campagne_operatore.cs">
+      <Link>CSV\imp\rec_campagne_operatore.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_canali_vendita.cs">
       <Link>CSV\imp\rec_canali_vendita.cs</Link>
     </Compile>
@@ -139,6 +142,9 @@
     </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_note.cs">
       <Link>CSV\imp\rec_clifor_note.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_operatore.cs">
+      <Link>CSV\imp\rec_clifor_operatore.cs</Link>
     </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_clifor_righdoc.cs">
       <Link>CSV\imp\rec_clifor_righdoc.cs</Link>

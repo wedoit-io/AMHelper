@@ -16,8 +16,6 @@ namespace AMHelper.CSV
     /// </summary>
     public class rec_art_um
     {
-        // CHIAVE|COD_DITTA|COD_ART|UM|DESC_UM|FAT_CONV|TIPO_UM|FLG_DEFAULT|DAT_ULT_MOD
-
         /// <summary>
         /// Chiave univoca della riga
         /// </summary>

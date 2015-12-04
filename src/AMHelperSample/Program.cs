@@ -20,7 +20,13 @@ namespace AMHelperSample
 
         }
 
-
+        /*
+        static void TestCvs_Sample()
+        {
+            var p = new rec_art();
+            string a = p.GetFileName();
+        }
+        */
         static void GetOrders_Sample()
         {
 
