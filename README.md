@@ -123,7 +123,7 @@ Esempio di invio con codice agente:
         ws_rec_lmparam AMData = null;
         bool lmRetVal = lmdata.get_am_par(ref AMData);
   
-        bool retRelease = lmdata.send_push_notification_by_agent("8", "Test");
+        bool retRelease = lmdata.send_push_notification_by_agent("8", "Testo del messaggio per l'agente");
     }
 ```
 Esempio di invio con utente appmanager
@@ -145,7 +145,7 @@ Esempio di invio con utente appmanager
       ws_rec_lmparam AMData = null;
       bool lmRetVal = lmdata.get_am_par(ref AMData);
   
-      bool retRelease = lmdata.send_push_notification_by_username("admin", "Test");
+      bool retRelease = lmdata.send_push_notification_by_username("admin", "Testo del messaggio per l'utente");
   }
 ```
 
