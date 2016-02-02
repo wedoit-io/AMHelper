@@ -48,7 +48,7 @@ namespace AMHelper.CSV
         public string T_COD_COND_PAG_DEP { get; set; }
         public string T_COD_OPERATORE { get; set; }
         public string T_DAT_CONS_RIG { get; set; }
-        public string FILLER5 { get; set; }
+        public string T_NOTE { get; set; }
         public string FILLER6 { get; set; }
         public string FILLER7 { get; set; }
         public string FILLER8 { get; set; }

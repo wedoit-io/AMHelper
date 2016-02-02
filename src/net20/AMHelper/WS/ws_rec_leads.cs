@@ -86,6 +86,8 @@ namespace AMHelper.WS
 
         public string cod_mansione { get; set; }
         public string mansione { get; set; }
+
+        public string cod_valuta { get; set; }
  
         public DateTime? data_import { get; set; }
     }

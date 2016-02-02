@@ -48,6 +48,7 @@ namespace AMHelper.WS
         public string ext_cod_tipo_ord { get; set; }
         public string guid_test_ord { get; set; }
         public string note { get; set; }
+        public string importatore { get; set; }
         public string utente { get; set; }
 
        
