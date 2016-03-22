@@ -77,6 +77,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_lang.cs">
       <Link>CSV\imp\rec_art_lang.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_matrici.cs">
+      <Link>CSV\imp\rec_art_matrici.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_ultacq.cs">
       <Link>CSV\imp\rec_art_ultacq.cs</Link>
     </Compile>

@@ -54,6 +54,7 @@
     <Compile Include="CSV\exp\rec_exp_leads.cs" />
     <Compile Include="CSV\exp\rec_exp_clifor_note.cs" />
     <Compile Include="CSV\imp\ITracciatoRecord.cs" />
+    <Compile Include="CSV\imp\rec_art_matrici.cs" />
     <Compile Include="CSV\imp\rec_clifor_operatore.cs" />
     <Compile Include="CSV\imp\rec_campagne_operatore.cs" />
     <Compile Include="CSV\imp\rec_cataloghi_agente.cs" />
