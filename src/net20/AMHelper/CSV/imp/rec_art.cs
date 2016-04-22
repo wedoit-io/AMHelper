@@ -137,6 +137,21 @@ namespace AMHelper.CSV
         /// </summary>
         public string DES_FILTRO3 { get; set; }
         /// <summary>
+        /// Descrizione del filtro A. 
+        /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca
+        /// </summary>
+        public string DES_FILTROA { get; set; }
+        /// <summary>
+        /// Descrizione del filtro B 
+        /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca. Dipende da Filtro A
+        /// </summary>
+        public string DES_FILTROB { get; set; }
+        /// <summary>
+        /// Descrizione del filtro C
+        /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca. Dipende da Filtro B
+        /// </summary>
+        public string DES_FILTROC { get; set; }
+        /// <summary>
         /// Codice dello sviluppo. Usato solo per il modulo wTrendy
         /// </summary>
         public string COD_SVILUPPO_BASE { get; set; }

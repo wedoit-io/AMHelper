@@ -71,6 +71,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_articoli_assortimenti.cs">
       <Link>CSV\imp\rec_articoli_assortimenti.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_barcode.cs">
+      <Link>CSV\imp\rec_art_barcode.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_conf.cs">
       <Link>CSV\imp\rec_art_conf.cs</Link>
     </Compile>

@@ -12,27 +12,91 @@ namespace AMHelper.CSV
 {
     public class rec_clifor_gen
     {
+        /// <summary>
+        /// Chiave univoca del record generata dai dati di origine
+        /// </summary>
         public string CHIAVE  { get; set; }
+        /// <summary>
+        /// Codice della ditta. E' il codice che identifica univocamente una ditta dentro il gestionale che, nel caso sia multisocietario, porebbe contenere dati di più aziende
+        /// </summary>
         public string COD_DITTA  { get; set; }
+        /// <summary>
+        /// Tipo anagrafica (0=CLiente, 1=Fornitore)
+        /// </summary>
         public string TIPO_CLIFOR  { get; set; }
+        /// <summary>
+        /// Codice del Cliente o Fornitore
+        /// </summary>
         public string COD_CLIFOR  { get; set; }
+        /// <summary>
+        /// Ragione sociale
+        /// </summary>
         public string RAG_SOC  { get; set; }
+        /// <summary>
+        /// Indirizzo (es: Via Marcuzzi, 8)
+        /// </summary>
         public string INDIRIZZO  { get; set; }
+        /// <summary>
+        /// Partita IVA
+        /// </summary>
         public string PARTITA_IVA  { get; set; }
+        /// <summary>
+        /// Codice fiscale
+        /// </summary>
         public string CODICE_FISCALE  { get; set; }
+        /// <summary>
+        /// Telefono 1
+        /// </summary>
         public string TELEFONO1  { get; set; }
+        /// <summary>
+        /// Telefono 2
+        /// </summary>
         public string TELEFONO2  { get; set; }
+        /// <summary>
+        /// Fax
+        /// </summary>
         public string FAX  { get; set; }
+        /// <summary>
+        /// Riferimento telefonico cellulare
+        /// </summary>
         public string CELLULARE  { get; set; }
+        /// <summary>
+        /// Indirizzo di posta elettronica (es: 346 2738888)
+        /// </summary>
         public string EMAIL  { get; set; }
+        /// <summary>
+        /// Indirizzo intenet del soggetto (es: http://www.acme.it)
+        /// </summary>
         public string INTERNET  { get; set; }
+        /// <summary>
+        /// Codice di avviamento postale (es: 45766)
+        /// </summary>
         public string CAP  { get; set; }
+        /// <summary>
+        /// Città (Es. Cesena)
+        /// </summary>
         public string CITTA  { get; set; }
+        /// <summary>
+        /// Sigra della provincia (es: FC)
+        /// </summary>
         public string PROVINCIA  { get; set; }
+        /// <summary>
+        /// Latitudine a cui si trova l'azienda. Usare il punto come separatore (es: 40.8517964)
+        /// </summary>
         public string LATITUDINE  { get; set; }
+        /// <summary>
+        /// Longitudine a cui si trova l'azienda. Usare il punto come separatore (es: 15.8517964)
+        /// </summary>
         public string LONGITUDINE  { get; set; }
         public string COD_CLASSE_SCONTO  { get; set; }
+        /// <summary>
+        /// Flag che identifica la modificabilità dell'anagrafica nel dispositivo (0=Non modificabile, -1= Modificabile)
+        /// </summary>
         public string FLG_MOD_NEL_DISP  { get; set; }
+        /// <summary>
+        /// Flag che identifica articoli di tipo deperibile. Usato per lo split di ordini che contendono
+        /// articoli di (0=Non modificabile, -1= Modificabile)
+        /// </summary>
         public string FLG_DEPERIBILITA  { get; set; }
         public string COD_CAT_EXTRA_SCONTO  { get; set; }
         public string NAZIONE  { get; set; }
@@ -76,7 +140,19 @@ namespace AMHelper.CSV
         public string COD_MACROCATEGORIA  { get; set; }
         public string COD_CATEGORIA  { get; set; }
         public string COD_SOTTOCATEGORIA  { get; set; }
+        /// <summary>
+        /// Totale minimo ordinabile. Se configurato agisce sull'inserimento ordini veloci
+        /// per impostare un totale minimo sotto il quale non si può prendere l'ordine
+        /// </summary>
+        public string TOT_MIN_ORDINABILE { get; set; }
+        /// <summary>
+        /// Flag che identifica un cliente di tipo template. 
+        /// Utilizzato per la raccolta ordini su clienti nuovi
+        /// </summary>
         public string FLG_NEW_CLIFOR { get; set; }
+        /// <summary>
+        /// Data di ultima modifica del record
+        /// </summary>
         public string DAT_ULT_MOD { get; set; }
     }
 }

@@ -12,13 +12,15 @@ namespace AMHelper.CSV
                 return new Dictionary<Type, string>
                 {
                     { typeof(rec_art), "io_art.dat"},
+                    { typeof(rec_art_barcode), "io_art_barcode.dat"},
                     { typeof(rec_art_lang), "io_art_lang.dat" },
                     { typeof(rec_articoli_assortimenti), "io_articoli_assortimenti.dat" },
                     { typeof(rec_art_conf), "io_art_conf.dat" },
                     { typeof(rec_art_ultacq), "io_art_ultacq.dat" },
-                    { typeof(rec_art_ultven), "io_art_ultacq.dat" },
+                    { typeof(rec_art_ultven), "io_art_ultven.dat" },
                     { typeof(rec_art_um), "io_art_um.dat" },
                     { typeof(rec_assortimenti), "io_assortimenti.dat" },
+                    { typeof(rec_campagne), "io_campagne.dat" },
                     { typeof(rec_citta), "io_citta.dat" },
                     { typeof(rec_nazioni), "io_nazioni.dat" },
                     { typeof(rec_clienti_assortimenti), "io_clienti_assortimenti.dat" },

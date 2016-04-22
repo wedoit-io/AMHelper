@@ -29,7 +29,8 @@ namespace AMHelper.CSV
         /// Codice dell'articolo
         /// </summary>
         public string COD_ART { get; set; }
-        // Codice dell'unità di misura (Es: PZ=Pezzi, KG=Chilogrammi, ecc...)
+        // Codice dell'unità di misura 
+        // (Es: PZ=Pezzi, KG=Chilogrammi, ecc...)
         public string UM { get; set; }
         /// <summary>
         /// Descrizione dell'unità di misura (Es: Pezzi, Chilogrammi, ecc...)
