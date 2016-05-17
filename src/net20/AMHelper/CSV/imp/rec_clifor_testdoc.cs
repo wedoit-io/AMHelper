@@ -45,21 +45,5 @@ namespace AMHelper.CSV
         public string NUM_FATT { get; set; }
         public string DATA_CONSEGNA { get; set; }
         public string DAT_ULT_MOD { get; set; }
-
-        /*
-
-        [Obsolete("Deprecato. Eliminare")]
-        public string DATA_CONFERMA { get; set; }
-
-        [Obsolete("Deprecato. Utilizzare NUM_DOC")]
-        public string NUMDOC { get; set; }   // Doppione da eliminare mantenuto per compatibilita (vedi sopra)
-
-        [Obsolete("Deprecato. Utilizzare DES_NOTE")]
-        public string NOTE_DOC { get; set; }  // Doppione da eliminare mantenuto per compatibilita (vedi sopra)
-
-        [Obsolete("Deprecato. Utilizzare DATA_DOC")]
-        public string DATADOC { get; set; }
-        */
     }
-
 }

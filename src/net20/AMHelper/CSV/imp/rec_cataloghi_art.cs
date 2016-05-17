@@ -20,16 +20,4 @@ namespace AMHelper.CSV
         public string DAT_ULT_MOD { get; set; }
 
     }
-
-    [Obsolete("Deprecato. Sostituito da rec_cataloghi_art")]
-    public class rec_taglie_cataloghi_art
-    {
-        // CHIAVE|COD_DITTA|COD_CATALOGO|COD_ARTICOLO|DAT_ULT_MOD
-        public string CHIAVE { get; set; }
-        public string COD_DITTA { get; set; }
-        public string COD_CATALOGO { get; set; }
-        public string COD_ARTICOLO { get; set; }
-        public string DAT_ULT_MOD { get; set; }
-
-    }
 }
