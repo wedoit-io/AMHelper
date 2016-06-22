@@ -162,6 +162,11 @@ namespace AMHelper.CSV
         /// </summary>
         public string FLG_LOCK_UM_DEFAULT { get; set; }
         /// <summary>
+        /// Descrizione estesa dell'articolo. Campo utilizzabile per aggiungere
+        /// contenuti extra sotto la descrizione dell'articolo
+        /// </summary>
+        public string DES_ESTESA { get; set; }
+        /// <summary>
         /// Data di ultima modifica del record
         /// </summary>
         public string DAT_ULT_MOD { get; set; }
