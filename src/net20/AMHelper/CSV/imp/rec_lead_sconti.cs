@@ -16,6 +16,7 @@ namespace AMHelper.CSV
         public string CHIAVE { get; set; }
         public string COD_DITTA { get; set; }
         public string COD_ART { get; set; }
+        public string COD_LISTINO { get; set; }
         public string COD_LEAD { get; set; }
         public string CLASSE_ARTICOLO { get; set; }
         public string DES_CLASSE_ARTICOLO { get; set; }
