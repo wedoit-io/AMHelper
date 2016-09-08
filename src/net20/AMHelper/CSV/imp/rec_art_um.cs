@@ -58,6 +58,10 @@ namespace AMHelper.CSV
         /// </summary>
         public string FLG_DEFAULT { get; set; }
         /// <summary>
+        /// Utilizzato per verificare che nell'inserimento dell'ordine, la quantità in UM1 sia multipla di questo valore.
+        /// </summary>
+        public string MULTIPLO { get; set; }
+        /// <summary>
         /// Data di ultima modifica del record
         /// </summary>
         public string DAT_ULT_MOD { get; set; }
