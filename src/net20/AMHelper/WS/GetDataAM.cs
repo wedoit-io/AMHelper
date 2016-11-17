@@ -48,6 +48,7 @@ namespace AMHelper.WS
         // Private fields
         private string _LeadsUrl;
         private string _LeadsNoteUrl;
+        private string _AttivitaUrl;
         private string _CliforUrl;
         private string _CliforNoteUrl;
         private string _OrdersUrl;
@@ -146,6 +147,7 @@ namespace AMHelper.WS
                 _BaseUrl = value;
                 _LeadsUrl =  value + "/" + "exportPaginazione/codaLeads";
                 _LeadsNoteUrl = value + "/" + "exportPaginazione/codaLeadNote";
+                _AttivitaUrl = value + "/" + "exportPaginazione/codaAttivita";
                 _CliforUrl = value + "/" + "exportPaginazione/codaClienti";
                 _CliforNoteUrl = value + "/" + "exportPaginazione/codaClienteNote";
                 _OrdersUrl = value + "/" + "exportPaginazione/codaOrdini";
@@ -294,6 +296,73 @@ namespace AMHelper.WS
             return true;
         }
 
+        public bool exp_attivita(int StartID, ref ws_rec_attivita AttivitaData)
+        {
+            try
+            {
+                var client = new RestClient(_AttivitaUrl);
+
+                if (!String.IsNullOrEmpty(this._ProxyUser))
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
+                // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
+                // ---------------------------------------------------------------
+                // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/notelead?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&lastID=0&count=0
+                var request = new RestRequest(Method.GET);
+                request.AddParameter("authKey", this.AuthKeyAM);
+                request.AddParameter("format", "json");
+                request.AddParameter("offset", 0);
+                request.AddParameter("limit", 50);
+                request.AddParameter("count", 0);
+                request.AddParameter("lastID", StartID);
+                //request.AddParameter("lastDateImport", "");       
+                var response = client.Execute<ws_rec_attivita>(request);
+
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
+
+#if NET20
+                var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_attivita>(response.Content);
+#endif
+
+#if NET35 || NET40
+                var myDeserializedData = response.Data;
+#endif
+
+                _ResponseURI = response.ResponseUri.ToString();
+
+                if (response.Data.attivita.Count == 0)
+                {
+                    _InfoMessage = "Data not found";
+                    return false;
+                }
+
+                AttivitaData = myDeserializedData;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("exp_attivita: Uri:" + _ResponseURI + ", Message:" + ex.Message, ex);
+            }
+            return true;
+        }
+        
         public bool exp_clifor(int StartID, ref ws_rec_clifor CliforData)
         {
             try

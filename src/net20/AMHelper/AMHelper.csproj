@@ -56,6 +56,8 @@
     <Compile Include="CSV\imp\ITracciatoRecord.cs" />
     <Compile Include="CSV\imp\rec_art_barcode.cs" />
     <Compile Include="CSV\imp\rec_art_matrici.cs" />
+    <Compile Include="CSV\imp\rec_attivita.cs" />
+    <Compile Include="CSV\imp\rec_tipi_attivita.cs" />
     <Compile Include="CSV\imp\rec_clifor_operatore.cs" />
     <Compile Include="CSV\imp\rec_campagne_operatore.cs" />
     <Compile Include="CSV\imp\rec_cataloghi_agente.cs" />
@@ -131,6 +133,7 @@
     <Compile Include="WS\GetDataLM.cs" />
     <Compile Include="WS\GetDataAM.cs" />
     <Compile Include="WS\ws_meta.cs" />
+    <Compile Include="WS\ws_rec_attivita.cs" />
     <Compile Include="WS\ws_rec_lm_param.cs" />
     <Compile Include="WS\ws_rec_clifor.cs" />
     <Compile Include="WS\ws_rec_clifor_note.cs" />

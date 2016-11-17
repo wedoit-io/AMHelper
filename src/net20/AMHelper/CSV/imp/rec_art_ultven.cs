@@ -25,6 +25,9 @@ namespace AMHelper.CSV
         /// Codice della Valuta
         /// </summary>
         public string COD_VALUTA { get; set; }
+        /// <summary>
+        /// Data di ultima modifica del record
+        /// </summary>
         public string DAT_ULT_MOD { get; set; }
     }
 }

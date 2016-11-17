@@ -95,6 +95,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_assortimenti.cs">
       <Link>CSV\imp\rec_assortimenti.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_attivita.cs">
+      <Link>CSV\imp\rec_attivita.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_campagne.cs">
       <Link>CSV\imp\rec_campagne.cs</Link>
     </Compile>
@@ -266,6 +269,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_taglie_sviluppi_art.cs">
       <Link>CSV\imp\rec_taglie_sviluppi_art.cs</Link>
     </Compile>
+    <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_tipi_attivita.cs">
+      <Link>CSV\imp\rec_tipi_attivita.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_valute.cs">
       <Link>CSV\imp\rec_valute.cs</Link>
     </Compile>
@@ -286,6 +292,9 @@
     </Compile>
     <Compile Include="..\..\net20\AMHelper\WS\ws_meta.cs">
       <Link>WS\ws_meta.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\ws_rec_attivita.cs">
+      <Link>WS\ws_rec_attivita.cs</Link>
     </Compile>
     <Compile Include="..\..\net20\AMHelper\WS\ws_rec_clifor.cs">
       <Link>WS\ws_rec_clifor.cs</Link>
