@@ -31,6 +31,7 @@
     <DefineConstants>TRACE;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\bin\lib\4.0\AMHelper.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />

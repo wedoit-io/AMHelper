@@ -49,10 +49,6 @@ namespace AMHelper.WS
         /// </summary>
         public string des_oggetto { get; set; }
         /// <summary>
-        /// Nota descrittiva della singola attività operatore
-        /// </summary>
-        public string des_note_attivita { get; set; }
-        /// <summary>
         /// Codice dell'operatore che ha compiuto l'attività
         /// </summary>
         public string cod_operatore { get; set; }
@@ -71,8 +67,8 @@ namespace AMHelper.WS
         /// </summary>
         public string ora_esecuzione { get; set; }
         /// <summary>
-        /// Note dell'attività master
-        /// Si tratta un ulteriore campo descrittivo della'attività
+        /// Note dell'attività effettuata dall'operatore
+        /// Nota inserita sull'attività
         /// </summary>
         public string des_note { get; set; }
         /// <summary>

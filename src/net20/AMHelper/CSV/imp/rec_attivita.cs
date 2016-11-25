@@ -43,24 +43,15 @@ namespace AMHelper.CSV
         /// </summary>
         public string DES_OGGETTO { get; set; } 
         /// <summary>
-        /// Note dell'attività
-        /// </summary>
-        public string DES_NOTE_ATTIVITA { get; set; } 
-        /// <summary>
         /// Codice dell'operatore a cui è assegnata l'attività
         /// </summary>
         public string COD_OPERATORE { get; set; } 
-        /// <summary>
-        /// Codice dello Stato della attività
-        /// Valori consentiti: D=Da eseguire, E=Eseguito, A=Annullato
-        /// </summary>
-        public string COD_STATO { get; set; }
         /// <summary>
         /// Data di in cui l'attività è stata effettuata
         /// </summary>
         public string DATA_ESECUZIONE { get; set; }
          /// <summary>
-        /// Orario in cui l'attività è stata effettuata nel formato HH:MM con riempimento di zeri a sinistra
+        /// Orario in cui l'attività è stata effettuata (nel formato HH:MM con riempimento di zeri a sinistra)
         /// Esempi: 14:55, 04:05
         /// </summary>
         public string ORA_ESECUZIONE { get; set; }
@@ -70,8 +61,31 @@ namespace AMHelper.CSV
         /// </summary>
         public string DES_NOTE { get; set; }
         /// <summary>
-        /// Data di ultima modifica del record
+        /// Codice dello Stato della attività
+        /// Valori consentiti: D=Da eseguire, E=Eseguito, A=Annullato
         /// </summary>
+        public string COD_STATO { get; set; }
+
+        /// <summary>
+        /// Data entro la quale deve essere completata l'attivita
+        /// </summary>
+        public string DATA_PREVISTA_ATTIVITA { get; set; }
+        /// <summary>
+        /// Orario entro il quale deve essere effettuata l'attivita (nel formato HH:MM con riempimento di zeri a sinistra)
+        /// Esempi: 14:55, 04:05
+        /// </summary>
+        public string ORA_PREVISTA_ATTIVITA { get; set; }
+        /// <summary>
+        /// Note dell'attività
+        /// </summary>
+        public string DES_NOTE_ATTIVITA { get; set; }
+        /// <summary>
+        /// Codice dello Stato della attività (master)
+        /// Valori consentiti: D=Da eseguire, E=Eseguito
+        /// </summary>
+        public string COD_STATO_ATTIVITA { get; set; }
+
+
         public string DAT_ULT_MOD { get; set; }
     }
 }
