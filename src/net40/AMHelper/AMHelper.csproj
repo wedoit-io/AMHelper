@@ -37,8 +37,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RestSharp">
-      <HintPath>..\..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -284,6 +285,9 @@
     </Compile>
     <Compile Include="..\..\net20\AMHelper\FieldFormatter.cs">
       <Link>FieldFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\net20\AMHelper\WS\Certificates.cs">
+      <Link>WS\Certificates.cs</Link>
     </Compile>
     <Compile Include="..\..\net20\AMHelper\WS\GetDataAM.cs">
       <Link>WS\GetDataAM.cs</Link>

@@ -13,6 +13,7 @@ using System.IO;
 
 #if NET35 || NET40
   using RestSharp;
+using RestSharp.Deserializers;
 #endif
 
 //using RestSharp.Serializers;
@@ -156,10 +157,16 @@ namespace AMHelper.WS
             }
         }
 
+        /// <summary>
+        /// Istanzia l'oggetto per la chiamata alle api
+        /// </summary>
+        /// <param name="AuthKeyAM">Chiave di autenticazione AM (AuthKeyAM)</param>
+        /// <param name="BaseUrl">Base url del servizio</param>
         public GetDataAM(string AuthKeyAM, string BaseUrl)
         {
             this.AuthKeyAM = AuthKeyAM;
             this.BaseUrl = BaseUrl;
+            Certificates.IgnoreBadCertificates();
         }
 
         public bool exp_leads(int StartID, ref ws_rec_leads LeadsData)
@@ -517,7 +524,7 @@ namespace AMHelper.WS
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
                 request.AddParameter("offset", 0);
-                request.AddParameter("limit", 50); // quanti ne elaboro al massimo ?
+                request.AddParameter("limit", 30); // quanti ne elaboro al massimo ?
                 request.AddParameter("count", 0);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
                 request.AddParameter("lastID", StartID);
 
@@ -527,8 +534,9 @@ namespace AMHelper.WS
                 //Console.WriteLine("1" + _OrdersUrl + "-" + this.AuthKeyAM);
 
                 //request.AddParameter("lastDateImport", "");       
-                var response = client.Execute<ws_rec_orders>(request);
-
+               // var response = client.Execute<ws_rec_orders>(request);
+                var response = client.Execute(request);
+                 
                 if (response.ResponseStatus != ResponseStatus.Completed)
                 {
                     throw new Exception("ResponseStatus: " + response.ErrorMessage);
@@ -545,19 +553,24 @@ namespace AMHelper.WS
                 }
                 
                 // La serializzazione di RestSharp scazza le date con il .net framework 2.0.
-                // Deserializzo i dati in un altro modo
+                // Faccio la deserializzazione in 2 modi diversi.
+                // Nel primo caso uso JsonConvert della vecchia libreria RestShar compilata col framework 2.0 
+                // (in cui ho rinominato i namespace per un conflitto con l'installazione su Business)
+                // Nel secondo caso uso il deserializzatore di RestSharp
 
 #if NET20 
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_orders>(response.Content);
 #endif
 
 #if NET35 || NET40
-                var myDeserializedData = response.Data;
+
+                 JsonDeserializer deserial = new JsonDeserializer();
+                 var myDeserializedData = deserial.Deserialize<ws_rec_orders>(response);
 #endif
 
                 _ResponseURI = response.ResponseUri.ToString();
 
-                if (response.Data.testate.Count == 0)
+                if (myDeserializedData.testate.Count == 0)
                 {
                     _InfoMessage = "Data not found";
                     return false;

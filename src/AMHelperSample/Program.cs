@@ -12,11 +12,11 @@ namespace AMHelperSample
 
         static void Main(string[] args)
         {
-            //SendNotificationByAgent_Sample();
+           // SendNotificationByAgent_Sample();
 
-            SendNotificationByUserName_Sample();
+           // SendNotificationByUserName_Sample();
 
-            //GetOrders_Sample();
+            GetOrders_Sample(13115);
 
         }
 
@@ -27,14 +27,15 @@ namespace AMHelperSample
             string a = p.GetFileName();
         }
         */
-        static void GetOrders_Sample()
+        static void GetOrders_Sample(int LastStoredID)
         {
 
             try
             {
+                // 12286C69-3466-47AD-AB05-CA003377CAD7
                 // Impostare le chiavi di autorizzazione
-                string AuthKeyLM = "3405D863-C49C-4D4B-B1FF-35D6231C61D9";
-                string AuthKeyAM = "FDFC769C-E950-4067-B4FF-0F3A134FB94B";
+                string AuthKeyLM = "2CF5249C-7905-4F8E-9B4D-5A1CDA9C0111";
+                string AuthKeyAM = "12286C69-3466-47AD-AB05-CA003377CAD7";
 
                 // Impostare true per l'utilizzo dei server di produzione (default)
                 // false consente l'utilizzo di server di test (solo ad uso interno)
@@ -47,13 +48,14 @@ namespace AMHelperSample
                 string ProxyHost = "192.168.10.134";
                 int ProxyPort = 8081;
                 bool ProxyEnable = false;
+
                 // ----------------------------------------------
 
 
                 // Quale è l'ultimo ID Ordine che è stato elaborato ?
                 // Questo dato, che qui è impostato a un valore fisso, deve essere recuperato da una tabella
                 // in cui il programma deve memorizzare l'ultimo ID ordine che è stato acquisito
-                int LastStoredID = 30;
+                //int LastStoredID = 13113;
 
                 // Dove è situato il mio AM ?
                 // Per prima cosa viene chiamato il License Manager (con l'opportuna chiave di autenticazione).
@@ -68,7 +70,7 @@ namespace AMHelperSample
 
 
                 // Quali sono i dati per il collegamento all'AppManager ?
-                // Grazie all'oggetto fornito dal License Manager, recupero i dati dei parametri dell'AppManagere mi faccio restituire
+                // Grazie all'oggetto fornito dal License Manager, recupero i dati dei parametri dell'AppManager e mi faccio restituire
                 // la struttura dei dati (se ce ne sono
                 ws_rec_lmparam AMData = null;
                 bool lmRetVal = lmdata.get_am_par(ref AMData);

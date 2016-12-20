@@ -144,14 +144,18 @@ namespace AMHelper.WS
 
         public GetDataLM(string AuthKeyLM)
         {
+            
             this.AuthKeyLM = AuthKeyLM;
             this.Production = true;
+            Certificates.IgnoreBadCertificates();
         }
 
         public GetDataLM(string AuthKey, bool Production)
         {
             this.AuthKeyLM = AuthKey;
             this.Production = Production;
+            Certificates.IgnoreBadCertificates();
+           
         }
 
         public bool get_am_par(ref ws_rec_lmparam AMData)
@@ -170,7 +174,8 @@ namespace AMHelper.WS
 
             try
             {
-
+                 
+                
                 var client = new RestClient(ServiceUrl);
 
                 if (!String.IsNullOrEmpty(this._ProxyUser))
