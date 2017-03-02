@@ -544,7 +544,7 @@ namespace AMHelper.WS
 
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    throw new Exception("StatusCode: " + response.StatusCode);
+                    throw new Exception("StatusCode: " + response.StatusCode + ", Content: " + response.Content);
                 }
 
                 if (response.ErrorException != null)

@@ -28,7 +28,14 @@ namespace AMHelper.WS
         public decimal? sconto_4 { get; set; }
         public decimal? sconto_5 { get; set; }
         public decimal? sconto_6 { get; set; }
+        /// <summary>
+        /// Codice agente associato all'utente
+        /// </summary>
         public string cod_agente { get; set; }
+        /// <summary>
+        /// Codice cliente associato all'utente (per app customer)
+        /// </summary>
+        public string cod_cliente_utente { get; set; }
         public string cod_clifor { get; set; }
         public string cod_colore_estensione1 { get; set; }
         public string cod_colore_estensione2 { get; set; }
