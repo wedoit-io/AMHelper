@@ -183,7 +183,7 @@ namespace AMHelper.WS
 
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
-                // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
+                // http://am.giessedati.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
@@ -251,7 +251,7 @@ namespace AMHelper.WS
 
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
-                // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/notelead?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&lastID=0&count=0
+                // http://am.giessedati.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/notelead?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&lastID=0&count=0
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
@@ -318,7 +318,7 @@ namespace AMHelper.WS
 
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
-                // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/notelead?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&lastID=0&count=0
+                // http://am.giessedati.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/notelead?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&lastID=0&count=0
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
@@ -385,7 +385,7 @@ namespace AMHelper.WS
 
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
-                // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
+                // http://am.giessedati.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
@@ -453,7 +453,7 @@ namespace AMHelper.WS
 
                 // Seconda chiamata. Estraggo tutto gli ordini (niente paginazione)
                 // ---------------------------------------------------------------
-                // http://am.apexnet.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
+                // http://am.giessedati.it/api_appstore_ib/v1/progetti/ib.appstore/exportPaginazione/leads?authKey=AAB993AE-92B7-4E88-BC59-B231F0CDAD7C&format=json&offset=0&limit=7&count=0&lastID=0
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
@@ -519,7 +519,7 @@ namespace AMHelper.WS
 
                 // Estraggo gli ordini (50 alla volta)
                 // ---------------------------------------------------------------
-                // http://test.apexnet.it/appmanager/api/v1/progetti/iorder.test2/exportPaginazione/ordini?authKey=E24EFDA3-9878-42D8-90FE-C00F847FE434&format=json&lastID=1&count=0&limit=50
+                // http://test.giessedati.it/appmanager/api/v1/progetti/iorder.test2/exportPaginazione/ordini?authKey=E24EFDA3-9878-42D8-90FE-C00F847FE434&format=json&lastID=1&count=0&limit=50
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");

@@ -279,11 +279,11 @@ namespace AMHelper.WS
 
             if (Production)
             {
-                ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/notifica_push_send";
+                ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/notifica_push_send";
             }
             else
             {
-                ServiceUrl = @"http://test.apexnet.it/licenseManagerAPI/v1/notifica_push_send";
+                ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/notifica_push_send";
             }
 
             try
@@ -317,11 +317,11 @@ namespace AMHelper.WS
 
             if (Production)
             {
-                ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/notifica_push_send_by_username";
+                ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/notifica_push_send_by_username";
             }
             else
             {
-                ServiceUrl = @"http://test.apexnet.it/licenseManagerAPI/v1/notifica_push_send_by_username";
+                ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/notifica_push_send_by_username";
             }
 
             try
