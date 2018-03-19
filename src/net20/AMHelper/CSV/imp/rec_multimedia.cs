@@ -26,6 +26,14 @@ namespace AMHelper.CSV
         /// </summary>
         public string COD_ART { get; set; }
         /// <summary>
+        /// Codice dell'operatore (utilizzato per gestire permessi differezionati in base all'operatore)
+        /// </summary>
+        public string COD_OPERATORE { get; set; }
+        /// <summary>
+        /// Codice dell'agente (utilizzato per gestire permessi differezionati in base all'agente)
+        /// </summary>
+        public string COD_AGENTE { get; set; }
+        /// <summary>
         /// Livello 1. (obbligatorio)
         /// Le immagini vengono create in una cartella che ha il none specificato in questo campo
         /// </summary>
