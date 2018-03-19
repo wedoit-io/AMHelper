@@ -34,7 +34,7 @@ namespace AMHelperSample
             {
                 // 12286C69-3466-47AD-AB05-CA003377CAD7
                 // Impostare le chiavi di autorizzazione
-                string AuthKeyLM = "356CCE98-EBA4-471B-9826-A3881455D3F0";
+                string AuthKeyLM = "882CE2CD-A04E-480B-A94D-95EF92273EF2";
                 string AuthKeyAM = "3892DB2C-53A9-4B57-9638-08C1E91319C8";
 
                 // Impostare true per l'utilizzo dei server di produzione (default)
