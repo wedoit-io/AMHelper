@@ -165,11 +165,11 @@ namespace AMHelper.WS
 
             if (Production)
             {
-                ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/getAMParam";
+                ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/getAMParam";
             }
             else
             {
-                ServiceUrl = @"http://test.apexnet.it/licenseManagerAPI/v1/getAMParam";
+                ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/getAMParam";
             }
 
             try
@@ -240,11 +240,11 @@ namespace AMHelper.WS
 
             if (Production)
             {
-                ServiceUrl = @"http://lm.apexnet.it/lmAPI/v1/update_versione_connettore";
+                ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/update_versione_connettore";
             }
             else
             {
-                ServiceUrl = @"http://test.apexnet.it/licenseManagerAPI/v1/update_versione_connettore";
+                ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/update_versione_connettore";
             }
 
             try
