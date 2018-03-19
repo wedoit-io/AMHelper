@@ -141,6 +141,14 @@ namespace AMHelper.CSV
         public string COD_CATEGORIA  { get; set; }
         public string COD_SOTTOCATEGORIA  { get; set; }
         /// <summary>
+        /// Codice che identifica un colore da mostrare come pin nella mappa (Può valere 0, 1 o 2)
+        /// </summary>
+        public string COD_PIN_MAPPA { get; set; }
+        /// <summary>
+        /// Descrizione (legata al pin) da mostrare nel pin della mappa
+        /// </summary>
+        public string DES_PIN_MAPPA { get; set; }
+        /// <summary>
         /// Totale minimo ordinabile. Se configurato agisce sull'inserimento ordini veloci
         /// per impostare un totale minimo sotto il quale non si può prendere l'ordine
         /// </summary>
