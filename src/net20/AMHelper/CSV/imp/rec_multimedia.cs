@@ -34,6 +34,10 @@ namespace AMHelper.CSV
         /// </summary>
         public string COD_AGENTE { get; set; }
         /// <summary>
+        /// Codice catalogo
+        /// </summary>
+        public string COD_CATALOGO { get; set; }
+        /// <summary>
         /// Livello 1. (obbligatorio)
         /// Le immagini vengono create in una cartella che ha il none specificato in questo campo
         /// </summary>
