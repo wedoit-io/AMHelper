@@ -170,6 +170,10 @@ namespace AMHelper.CSV
         /// Data di ultima modifica del record
         /// </summary>
         public string DAT_ULT_MOD { get; set; }
+        /// <summary>
+        /// Codice articolo padre per gestione articoli padre-figlio
+        /// </summary>
+        public string COD_ART_PADRE { get; set; }
 
         //public string Nome { get { return "nomefile.dat";  } }
 
