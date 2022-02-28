@@ -26,7 +26,7 @@ namespace AMHelper.CSV
         /// <summary>
         /// Codice Agente
         /// </summary>
-        public string COD_AGENTE { get; set; }
+        public string COD_AGE { get; set; }
         /// <summary>
         ///  Codice Marca
         /// </summary>
