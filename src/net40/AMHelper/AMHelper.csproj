@@ -94,6 +94,12 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_art_um.cs">
       <Link>CSV\imp\rec_art_um.cs</Link>
     </Compile>
+	<Compile Include="..\..\net20\AMHelper\CSV\imp\rec_cli_escl.cs">
+      <Link>CSV\imp\rec_cli_escl.cs</Link>
+    </Compile>
+	<Compile Include="..\..\net20\AMHelper\CSV\imp\rec_age_escl.cs">
+      <Link>CSV\imp\rec_age_escl.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_assortimenti.cs">
       <Link>CSV\imp\rec_assortimenti.cs</Link>
     </Compile>
