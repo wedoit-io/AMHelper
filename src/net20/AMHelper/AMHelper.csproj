@@ -57,6 +57,8 @@
     <Compile Include="CSV\exp\rec_exp_leads.cs" />
     <Compile Include="CSV\exp\rec_exp_clifor_note.cs" />
     <Compile Include="CSV\imp\ITracciatoRecord.cs" />
+    <Compile Include="CSV\imp\rec_cli_escl.cs" />
+    <Compile Include="CSV\imp\rec_age_escl.cs" />
     <Compile Include="CSV\imp\rec_art_barcode.cs" />
     <Compile Include="CSV\imp\rec_art_matrici.cs" />
     <Compile Include="CSV\imp\rec_attivita.cs" />
