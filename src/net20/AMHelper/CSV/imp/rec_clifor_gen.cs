@@ -162,5 +162,13 @@ namespace AMHelper.CSV
         /// Data di ultima modifica del record
         /// </summary>
         public string DAT_ULT_MOD { get; set; }
+        /// <summary>
+        /// Flag che identifica un cliente di tipo negozio. 
+        /// </summary>
+        public string FLG_NEGOZIO { get; set; }
+        /// <summary>
+        /// Codice che identifica il tipo di blocco. 
+        /// </summary>
+        public string COD_BLOCCO { get; set; }
     }
 }
