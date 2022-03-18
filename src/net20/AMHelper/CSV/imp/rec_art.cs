@@ -175,6 +175,16 @@ namespace AMHelper.CSV
         /// </summary>
         public string COD_ART_PADRE { get; set; }
 
+        /// <summary>
+        /// Flag che indica un articolo a catalogo
+        /// </summary>
+        public string FLG_CATALOGO { get; set; }
+
+        /// <summary>
+        /// Flag redditività articolo
+        /// </summary>
+        public string FLG_REDDITTIVITA { get; set; }
+
         //public string Nome { get { return "nomefile.dat";  } }
 
         /*
