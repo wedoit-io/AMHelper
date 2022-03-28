@@ -23,10 +23,10 @@ namespace AMHelper.WS
     /*
     public class GetDataAMException : Exception
     {
-    
-         * 
+
+         *
          * base(message, this.InnerException)
-         * 
+         *
         public EmployeeListNotFoundException()
         {
         }
@@ -40,12 +40,12 @@ namespace AMHelper.WS
             : base(message, inner)
         {
         }
-       
+
     }
      */
 
     public class GetDataAM
-    {        
+    {
         // Private fields
         private string _LeadsUrl;
         private string _LeadsNoteUrl;
@@ -124,7 +124,7 @@ namespace AMHelper.WS
         private string _BaseUrl;
 
         // Property AuthKey
-        private string AuthKeyAM    
+        private string AuthKeyAM
         {
             get
             {
@@ -137,7 +137,7 @@ namespace AMHelper.WS
         }
 
         // Property CdaProgetto
-        private string BaseUrl 
+        private string BaseUrl
         {
             get
             {
@@ -191,8 +191,8 @@ namespace AMHelper.WS
                 request.AddParameter("limit", 50);
                 request.AddParameter("count", 0);
                 request.AddParameter("lastID", StartID);
-                //request.AddParameter("lastDateImport", "");       
-                
+                //request.AddParameter("lastDateImport", "");
+
                 var response = client.Execute<ws_rec_leads>(request);
 
                 if (response.ResponseStatus != ResponseStatus.Completed)
@@ -210,7 +210,7 @@ namespace AMHelper.WS
                     throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
-#if NET20 
+#if NET20
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_leads>(response.Content);
 #endif
 
@@ -259,7 +259,7 @@ namespace AMHelper.WS
                 request.AddParameter("limit", 50);
                 request.AddParameter("count", 0);
                 request.AddParameter("lastID", StartID);
-                //request.AddParameter("lastDateImport", "");       
+                //request.AddParameter("lastDateImport", "");
                 var response = client.Execute<ws_rec_leads_note>(request);
 
                 if (response.ResponseStatus != ResponseStatus.Completed)
@@ -277,7 +277,7 @@ namespace AMHelper.WS
                     throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
-#if NET20 
+#if NET20
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_leads_note>(response.Content);
 #endif
 
@@ -326,7 +326,7 @@ namespace AMHelper.WS
                 request.AddParameter("limit", 50);
                 request.AddParameter("count", 0);
                 request.AddParameter("lastID", StartID);
-                //request.AddParameter("lastDateImport", "");       
+                //request.AddParameter("lastDateImport", "");
                 var response = client.Execute<ws_rec_attivita>(request);
 
                 if (response.ResponseStatus != ResponseStatus.Completed)
@@ -369,7 +369,7 @@ namespace AMHelper.WS
             }
             return true;
         }
-        
+
         public bool exp_clifor(int StartID, ref ws_rec_clifor CliforData)
         {
             try
@@ -393,7 +393,7 @@ namespace AMHelper.WS
                 request.AddParameter("limit", 50);
                 request.AddParameter("count", 0);
                 request.AddParameter("lastID", StartID);
-                //request.AddParameter("lastDateImport", "");       
+                //request.AddParameter("lastDateImport", "");
                 var response = client.Execute<ws_rec_clifor>(request);
 
                 if (response.ResponseStatus != ResponseStatus.Completed)
@@ -411,7 +411,7 @@ namespace AMHelper.WS
                     throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
-#if NET20 
+#if NET20
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_clifor>(response.Content);
 #endif
 
@@ -426,7 +426,7 @@ namespace AMHelper.WS
                     _InfoMessage = "Data not found";
                     return false;
                 }
-   
+
                 // Preparo una lista in cui mettere il resultset della query linq
                 CliforData = myDeserializedData;
 
@@ -461,7 +461,7 @@ namespace AMHelper.WS
                 request.AddParameter("limit", 50);
                 request.AddParameter("count", 0);
                 request.AddParameter("lastID", StartID);
-                //request.AddParameter("lastDateImport", "");       
+                //request.AddParameter("lastDateImport", "");
                 var response = client.Execute<ws_rec_clifor_note>(request);
 
                 if (response.ResponseStatus != ResponseStatus.Completed)
@@ -479,7 +479,7 @@ namespace AMHelper.WS
                     throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
 
-#if NET20 
+#if NET20
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_clifor_note>(response.Content);
 #endif
 
@@ -528,16 +528,17 @@ namespace AMHelper.WS
                 request.AddParameter("lastDateImport", null);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
                 request.AddParameter("count", 0);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
                 request.AddParameter("lastID", StartID);
+                request.AddParameter("statusExport", null);
 
                 // request.RequestFormat = DataFormat.Json;
                 // request.JsonSerializer = new RestSharpJsonNetSerializer();
 
                 //Console.WriteLine("1" + _OrdersUrl + "-" + this.AuthKeyAM);
 
-                //request.AddParameter("lastDateImport", "");       
+                //request.AddParameter("lastDateImport", "");
                // var response = client.Execute<ws_rec_orders>(request);
                 var response = client.Execute(request);
-                 
+
                 if (response.ResponseStatus != ResponseStatus.Completed)
                 {
                     throw new Exception("ResponseStatus: " + response.ErrorMessage);
@@ -552,14 +553,14 @@ namespace AMHelper.WS
                 {
                     throw new Exception("Error retrieving response 2.  Check inner details for more info.");
                 }
-                
+
                 // La serializzazione di RestSharp scazza le date con il .net framework 2.0.
                 // Faccio la deserializzazione in 2 modi diversi.
-                // Nel primo caso uso JsonConvert della vecchia libreria RestShar compilata col framework 2.0 
+                // Nel primo caso uso JsonConvert della vecchia libreria RestShar compilata col framework 2.0
                 // (in cui ho rinominato i namespace per un conflitto con l'installazione su Business)
                 // Nel secondo caso uso il deserializzatore di RestSharp
 
-#if NET20 
+#if NET20
                 var myDeserializedData = JsonConvert.DeserializeObject<ws_rec_orders>(response.Content);
 #endif
 
@@ -588,6 +589,6 @@ namespace AMHelper.WS
             }
             return true;
         }
- 
+
     }
 }

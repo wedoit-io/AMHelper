@@ -22,7 +22,7 @@ namespace AMHelper.WS
     /*
     public class GetDataLMException : Exception
     {
-       
+
         public EmployeeListNotFoundException()
         {
         }
@@ -36,7 +36,7 @@ namespace AMHelper.WS
             : base(message, inner)
         {
         }
-         
+
     }
     */
 
@@ -144,7 +144,7 @@ namespace AMHelper.WS
 
         public GetDataLM(string AuthKeyLM)
         {
-            
+
             this.AuthKeyLM = AuthKeyLM;
             this.Production = true;
             Certificates.IgnoreBadCertificates();
@@ -155,27 +155,34 @@ namespace AMHelper.WS
             this.AuthKeyLM = AuthKey;
             this.Production = Production;
             Certificates.IgnoreBadCertificates();
-           
+
         }
 
-        public bool get_am_par(ref ws_rec_lmparam AMData)
+        public bool get_am_par(ref ws_rec_lmparam AMData, string url = "")
         {
-            string ServiceUrl = "";
+            string ServiceUrl =url;
 
 
-            if (Production)
-            {
-                ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/getAMParam";
-            }
-            else
-            {
-                ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/getAMParam";
-            }
+            //if (string.IsNullOrEmpty(url))
+            //{
+            //    if (Production)
+            //    {
+            //        ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/getAMParam";
+            //    }
+            //    else
+            //    {
+            //        ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/getAMParam";
+            //    }
+            //}
+            //else
+            //{
+            //    ServiceUrl = url;
+            //}
 
             try
             {
-                 
-                
+
+
                 var client = new RestClient(ServiceUrl);
 
                 if (!String.IsNullOrEmpty(this._ProxyUser))
