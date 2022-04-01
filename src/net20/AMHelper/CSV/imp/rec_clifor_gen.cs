@@ -178,7 +178,7 @@ namespace AMHelper.CSV
         /// <summary>
         /// Codice giorno consegna.
         /// </summary>
-        public string COD_GIORNO_CONS { get; set; }
+        public string COD_GIORNO_CONSEGNA { get; set; }
         /// <summary>
         /// Codice tipo cliente.
         /// </summary>
