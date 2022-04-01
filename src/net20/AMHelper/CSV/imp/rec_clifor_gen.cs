@@ -69,6 +69,10 @@ namespace AMHelper.CSV
         /// </summary>
         public string INTERNET  { get; set; }
         /// <summary>
+        /// Indirizzo di posta elettronica certificata
+        /// </summary>
+        public string PEC { get; set; }
+        /// <summary>
         /// Codice di avviamento postale (es: 45766)
         /// </summary>
         public string CAP  { get; set; }
@@ -102,6 +106,7 @@ namespace AMHelper.CSV
         public string NAZIONE  { get; set; }
         public string PAGAMENTO  { get; set; }
         public string BANCA  { get; set; }
+        public string IBAN { get; set; }
         public string AGENZIA  { get; set; }
         public string LISTINO_ANAGRAFICO  { get; set; }
         public string COD_SVILUPPO { get; set; }
@@ -154,7 +159,7 @@ namespace AMHelper.CSV
         /// </summary>
         public string TOT_MIN_ORDINABILE { get; set; }
         /// <summary>
-        /// Flag che identifica un cliente di tipo template. 
+        /// Flag che identifica un cliente di tipo template.
         /// Utilizzato per la raccolta ordini su clienti nuovi
         /// </summary>
         public string FLG_NEW_CLIFOR { get; set; }
@@ -163,12 +168,20 @@ namespace AMHelper.CSV
         /// </summary>
         public string DAT_ULT_MOD { get; set; }
         /// <summary>
-        /// Flag che identifica un cliente di tipo negozio. 
+        /// Flag che identifica un cliente di tipo negozio.
         /// </summary>
         public string FLG_NEGOZIO { get; set; }
         /// <summary>
-        /// Codice che identifica il tipo di blocco. 
+        /// Codice che identifica il tipo di blocco.
         /// </summary>
         public string COD_BLOCCO { get; set; }
+        /// <summary>
+        /// Codice giorno consegna.
+        /// </summary>
+        public string COD_GIORNO_CONS { get; set; }
+        /// <summary>
+        /// Codice tipo cliente.
+        /// </summary>
+        public string COD_TIPO_CLIENTE { get; set; }
     }
 }
