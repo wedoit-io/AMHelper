@@ -68,7 +68,7 @@ namespace AMHelper.CSV
         ///  Unità di misura 1
         /// </summary>
         public string UM1 { get; set; }
-        /// <summary> 
+        /// <summary>
         ///  Unità di misura 2 (non usato)
         /// </summary>
         public string UM2 { get; set; }
@@ -122,12 +122,12 @@ namespace AMHelper.CSV
         /// </summary>
         public string PREZZO_RETAIL { get; set; }
         /// <summary>
-        /// Descrizione del filtro 1. 
+        /// Descrizione del filtro 1.
         /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca
         /// </summary>
         public string DES_FILTRO1 { get; set; }
         /// <summary>
-        /// Descrizione del filtro 2 
+        /// Descrizione del filtro 2
         /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca. Dipende da Filtro 1
         /// </summary>
         public string DES_FILTRO2 { get; set; }
@@ -137,12 +137,12 @@ namespace AMHelper.CSV
         /// </summary>
         public string DES_FILTRO3 { get; set; }
         /// <summary>
-        /// Descrizione del filtro A. 
+        /// Descrizione del filtro A.
         /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca
         /// </summary>
         public string DES_FILTROA { get; set; }
         /// <summary>
-        /// Descrizione del filtro B 
+        /// Descrizione del filtro B
         /// Valore descrittivo i cui valori distinti sono usati nell'iPad per configurare un filtro di ricerca. Dipende da Filtro A
         /// </summary>
         public string DES_FILTROB { get; set; }
@@ -156,7 +156,7 @@ namespace AMHelper.CSV
         /// </summary>
         public string COD_SVILUPPO_BASE { get; set; }
         /// <summary>
-        /// Flag che identifica la possibilità, per l'utente, di modificare l'unità di misura 
+        /// Flag che identifica la possibilità, per l'utente, di modificare l'unità di misura
         /// di default (FLG_DEFAULT di io_art_um.dat), in fase di inserimento ordine
         /// Valori consentiti: 0 = Modificabile (default), -1 = Non modificabile
         /// </summary>
@@ -184,6 +184,14 @@ namespace AMHelper.CSV
         /// Flag redditività articolo
         /// </summary>
         public string FLG_REDDITTIVITA { get; set; }
+        /// <summary>
+        /// Flag kit
+        /// </summary>
+        public string FLG_KIT { get; set; }
+        /// <summary>
+        /// Flag ordinabile
+        /// </summary>
+        public string FLG_ORDINABILE { get; set; }
 
         //public string Nome { get { return "nomefile.dat";  } }
 
