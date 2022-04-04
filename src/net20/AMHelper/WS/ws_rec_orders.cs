@@ -58,7 +58,18 @@ namespace AMHelper.WS
         public string importatore { get; set; }
         public string utente { get; set; }
 
-       
+        public string noteFattura { get; set; }
+        public string noteConsegna { get; set; }
+        public string noteGenerali { get; set; }
+        public decimal? codUrgenza { get; set; }
+        public decimal? flagAggiunta { get; set; }
+        public string codMagazzino { get; set; }
+        public decimal? flagRitiro { get; set; }
+        public DateTime? dataRitiro { get; set; }
+        public string pecClifor { get; set; }
+        public string codGiornoConsegnaClifor { get; set; }
+        public string codTipoClienteClifor { get; set; }
+        public string codZonaConsegnaClifor { get; set; }
 
         public List<Clienti> clienti { get; set; }
         public List<RigaOrdineExport> righe { get; set; }
@@ -170,6 +181,9 @@ namespace AMHelper.WS
         public string cod_colore14 { get; set; }
         public string cod_materiale15 { get; set; }
         public string cod_colore15 { get; set; }
+
+        public string cod_tipo_fattura { get; set; }
+
         public List<DettaglioRigaOrdineExport> dettagli { get; set; }
     }
 
