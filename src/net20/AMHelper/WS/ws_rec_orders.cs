@@ -61,15 +61,15 @@ namespace AMHelper.WS
         public string noteFattura { get; set; }
         public string noteConsegna { get; set; }
         public string noteGenerali { get; set; }
-        public decimal? codUrgenza { get; set; }
-        public decimal? flagAggiunta { get; set; }
-        public string codMagazzino { get; set; }
-        public decimal? flagRitiro { get; set; }
-        public DateTime? dataRitiro { get; set; }
-        public string pecClifor { get; set; }
-        public string codGiornoConsegnaClifor { get; set; }
-        public string codTipoClienteClifor { get; set; }
-        public string codZonaConsegnaClifor { get; set; }
+        public decimal? cod_urgenza { get; set; }
+        public decimal? flag_aggiunta { get; set; }
+        public string cod_magazzino { get; set; }
+        public decimal? flag_ritiro { get; set; }
+        public DateTime? data_ritiro { get; set; }
+        public string pec_clifor { get; set; }
+        public string cod_gg_consegna_clifor { get; set; }
+        public string cod_tipo_cliente_clifor { get; set; }
+        public string cod_zona_consegna_clifor { get; set; }
 
         public List<Clienti> clienti { get; set; }
         public List<RigaOrdineExport> righe { get; set; }
