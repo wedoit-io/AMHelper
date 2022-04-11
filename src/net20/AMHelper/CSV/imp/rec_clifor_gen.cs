@@ -128,7 +128,7 @@ namespace AMHelper.CSV
         public string MACROAREA  { get; set; }
         public string DATA_CREAZIONE  { get; set; }
         public string AREA  { get; set; }
-        public string ZONA  { get; set; }
+        public string DES_ZONA  { get; set; }
         public string MACROCATEGORIA  { get; set; }
         public string DATA_ULT_DOC_NO_FT  { get; set; }
         public string CATEGORIA  { get; set; }
@@ -183,5 +183,7 @@ namespace AMHelper.CSV
         /// Codice tipo cliente.
         /// </summary>
         public string COD_TIPO_CLIENTE { get; set; }
+
+        public string DES_STATO { get; set; }
     }
 }
