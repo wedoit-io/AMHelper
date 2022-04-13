@@ -6,8 +6,8 @@ namespace AMHelper.CSV
 {
     public static class Tracciati
     {
-        
-        public static Dictionary<Type, string> NomeFile { 
+
+        public static Dictionary<Type, string> NomeFile {
             get {
                 return new Dictionary<Type, string>
                 {
@@ -69,6 +69,9 @@ namespace AMHelper.CSV
                     { typeof(rec_classi_sconto), "io_classi_sconto.dat" },
                     { typeof(rec_clifor_cate), "io_clifor_cate.dat" },
                     { typeof(rec_porto), "io_porto.dat" },
+                    { typeof(rec_magazzini), "io_magazzini.dat" },
+                    { typeof(rec_cli_escl), "io_clifor_esclusioni.dat" },
+                    { typeof(rec_age_escl), "io_agenti_esclusioni.dat" },
 
                     { typeof(rec_lead_concorrenti), "io_lead_concorrenti.dat" },
                     { typeof(rec_lead_mod_acquisizione), "io_lead_mod_acquisizione.dat" },

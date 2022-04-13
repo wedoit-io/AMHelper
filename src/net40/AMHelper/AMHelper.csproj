@@ -64,6 +64,9 @@
     <Compile Include="..\..\net20\AMHelper\CSV\imp\ITracciatoRecord.cs">
       <Link>CSV\imp\ITracciatoRecord.cs</Link>
     </Compile>
+	<Compile Include="..\..\net20\AMHelper\CSV\imp\rec_magazzini.cs">
+      <Link>CSV\imp\rec_magazzini.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\CSV\imp\rec_agenti.cs">
       <Link>CSV\imp\rec_agenti.cs</Link>
     </Compile>
