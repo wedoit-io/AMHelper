@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 //using System.Collections.IEnumerable;
@@ -12,7 +12,7 @@ using System.IO;
 #endif
 
 #if NET35 || NET40
-  using RestSharp;
+using RestSharp;
 using RestSharp.Deserializers;
 #endif
 
@@ -146,7 +146,7 @@ namespace AMHelper.WS
             set
             {
                 _BaseUrl = value;
-                _LeadsUrl =  value + "/" + "exportPaginazione/codaLeads";
+                _LeadsUrl = value + "/" + "exportPaginazione/codaLeads";
                 _LeadsNoteUrl = value + "/" + "exportPaginazione/codaLeadNote";
                 _AttivitaUrl = value + "/" + "exportPaginazione/codaAttivita";
                 _CliforUrl = value + "/" + "exportPaginazione/codaClienti";
@@ -289,7 +289,7 @@ namespace AMHelper.WS
 
                 if (response.Data.note.Count == 0)
                 {
-                     _InfoMessage = "Data not found";
+                    _InfoMessage = "Data not found";
                     return false;
                 }
 
@@ -505,7 +505,7 @@ namespace AMHelper.WS
             return true;
         }
 
-        public bool exp_orders(int StartID, ref ws_rec_orders OrdersData)
+        public bool exp_orders(int StartID, int offset, int count, ref ws_rec_orders OrdersData)
         {
             try
             {
@@ -523,10 +523,10 @@ namespace AMHelper.WS
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
-                request.AddParameter("offset", 0);
+                request.AddParameter("offset", offset);
                 request.AddParameter("limit", 30); // quanti ne elaboro al massimo ?
                 request.AddParameter("lastDateImport", null);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
-                request.AddParameter("count", 0);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
+                request.AddParameter("count", count);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
                 request.AddParameter("lastID", StartID);
                 request.AddParameter("statusExport", null);
 
@@ -536,7 +536,7 @@ namespace AMHelper.WS
                 //Console.WriteLine("1" + _OrdersUrl + "-" + this.AuthKeyAM);
 
                 //request.AddParameter("lastDateImport", "");
-               // var response = client.Execute<ws_rec_orders>(request);
+                // var response = client.Execute<ws_rec_orders>(request);
                 var response = client.Execute(request);
 
                 if (response.ResponseStatus != ResponseStatus.Completed)
@@ -566,8 +566,8 @@ namespace AMHelper.WS
 
 #if NET35 || NET40
 
-                 JsonDeserializer deserial = new JsonDeserializer();
-                 var myDeserializedData = deserial.Deserialize<ws_rec_orders>(response);
+                JsonDeserializer deserial = new JsonDeserializer();
+                var myDeserializedData = deserial.Deserialize<ws_rec_orders>(response);
 #endif
 
                 _ResponseURI = response.ResponseUri.ToString();
