@@ -572,7 +572,7 @@ namespace AMHelper.WS
 
                 _ResponseURI = response.ResponseUri.ToString();
 
-                if (myDeserializedData.testate.Count == 0 && myDeserializedData.meta.total_count == 0)
+                if (myDeserializedData.testate.Count == 0)
                 {
                     _InfoMessage = "Data not found";
                     return false;
