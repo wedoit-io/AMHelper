@@ -74,7 +74,7 @@ namespace AMHelperSample
                 // la struttura dei dati (se ce ne sono
                 ws_rec_lmparam AMData = null;
                 bool lmRetVal = lmdata.get_am_par(ref AMData);
-
+                
                 // Che versione di connettore sto usando ?
                 // Per tenere una traccia centralizzata delle versioni dei connettori, è possibile inviare al server
                 // la versione del proprio connettore.
@@ -82,10 +82,10 @@ namespace AMHelperSample
 
 
                 string wsURL = AMData.url_am_api ;
-
+                
                 string CodProgetto = AMData.cod_prog;
-
-
+                
+           
 
                 // Leggo l'ID dell'ultimo ordine recuperato dal WS. Se è la prima volta tornerà 0 (zero)
 
@@ -98,7 +98,7 @@ namespace AMHelperSample
                 {
                     ed.HttpProxyAutentication(ProxyUser, ProxyPassword, ProxyHost, ProxyPort);
                 }
-
+                    
 
 
                 // Chiamo il WS per farmi dare la lista dei leads
@@ -108,7 +108,7 @@ namespace AMHelperSample
                 try
                 {
 
-                    RetVal = ed.exp_orders(LastStoredID, 0,0,ref OrdersData);
+                    RetVal = ed.exp_orders(LastStoredID, ref OrdersData);
 
                     if (RetVal && OrdersData != null)
                     {
