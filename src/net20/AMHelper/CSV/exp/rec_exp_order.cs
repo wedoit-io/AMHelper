@@ -64,5 +64,6 @@ namespace AMHelper.CSV
         public string FILLER18 { get; set; }
         public string FILLER19 { get; set; }
         public string FILLER20 { get; set; }
+        public string COD_SERIE_ORDINI { get; set; }
     }
 }

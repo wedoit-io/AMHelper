@@ -458,9 +458,12 @@ namespace AMHelper.WS
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
                 request.AddParameter("offset", 0);
-                request.AddParameter("limit", 50);
-                request.AddParameter("count", 0);
+                request.AddParameter("limit", 50); // quanti ne elaboro al massimo ?
+                request.AddParameter("lastDateImport", null);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
+                request.AddParameter("count", 0);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
                 request.AddParameter("lastID", StartID);
+
+
                 //request.AddParameter("lastDateImport", "");
                 var response = client.Execute<ws_rec_clifor_note>(request);
 
