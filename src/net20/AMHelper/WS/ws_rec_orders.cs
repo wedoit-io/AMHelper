@@ -119,9 +119,9 @@ namespace AMHelper.WS
         public string fax_consegna { get; set; }
         public string cod_porto_consegna { get; set; }
 
-        public string email_pec { get; set; }
-        public string cod_gg_cons { get; set; }
-        public string cod_cla_pov { get; set; }
+        public string pec_clifor { get; set; }
+        public string cod_gg_cons_clifor { get; set; }
+        public string cod_tipo_cli_clifor { get; set; }
     }
 
     public class RigaOrdineExport
