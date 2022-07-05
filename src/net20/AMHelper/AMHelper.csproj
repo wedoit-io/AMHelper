@@ -134,6 +134,7 @@
     <Compile Include="CSV\imp\rec_taglie_sviluppi_art.cs" />
     <Compile Include="CSV\imp\rec_valute.cs" />
     <Compile Include="CSV\imp\rec_var_combinazioni.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FieldFormatter.cs" />
     <Compile Include="WS\Certificates.cs" />

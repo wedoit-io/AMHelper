@@ -113,7 +113,7 @@ namespace AMHelper
 
             return Result;
         }
-        
+
         /// <summary>
         /// Utilizzato nell'import dei tracciati (es: import imp_clifor_note.dat)
         /// </summary>
@@ -213,6 +213,12 @@ namespace AMHelper
                 retVal = Convert.ToDateTime(DataValue).ToString("ddMMyyyy");
 
             return retVal;
+        }
+
+        static public string StringToEnumInt(string value)
+        {
+            var content = (Urgenza)Enum.Parse(typeof(Urgenza), value);
+            return ((int)(content)).ToString();
         }
 
     }

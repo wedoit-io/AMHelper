@@ -295,6 +295,9 @@
     <Compile Include="..\..\net20\AMHelper\FieldFormatter.cs">
       <Link>FieldFormatter.cs</Link>
     </Compile>
+	<Compile Include="..\..\net20\AMHelper\Enums.cs">
+      <Link>Enums.cs</Link>
+    </Compile>
     <Compile Include="..\..\net20\AMHelper\WS\Certificates.cs">
       <Link>WS\Certificates.cs</Link>
     </Compile>
