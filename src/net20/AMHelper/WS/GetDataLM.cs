@@ -228,7 +228,6 @@ namespace AMHelper.WS
                 if (AMData != null)
                 {
                     _CodProgetto = AMData.cod_prog;
-                    AMData.url_am = AMData.url_am;
                 }
 
 

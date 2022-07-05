@@ -8,5 +8,6 @@ namespace AMHelper.WS
     {
         public string cod_prog { get; set; }
         public string url_am { get; set; }
+        public string url_am_api { get; set; }
     }
 }
