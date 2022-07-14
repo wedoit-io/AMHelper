@@ -36,6 +36,8 @@ namespace AMHelper.CSV
         /// </summary>
         public string COD_VALUTA { get; set; }
         public string DAT_ULT_MOD { get; set; }
-               
+
+        public string IMPORTO_FATT { get; set; }
+
     }
 }
