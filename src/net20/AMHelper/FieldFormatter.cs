@@ -221,5 +221,34 @@ namespace AMHelper
             return ((int)(content)).ToString();
         }
 
+        static public string Decompone(string value, out string flg_ritiro)
+        {
+            flg_ritiro = "0";
+
+            if (value.Contains("Ritiro"))
+            {
+                flg_ritiro = "1";
+            }
+
+            if (value.Contains("Urgente"))
+            {
+                return "Urgente";
+            }
+            else if (value.Contains("Normale"))
+            {
+                return "Normale";
+            }
+            else if (value.Contains("Corriere"))
+            {
+                return "Corriere";
+            }
+            else if(value.Contains("Agente"))
+            {
+                return "Agente";
+            }
+
+            return string.Empty;
+        }
+
     }
 }

@@ -27,7 +27,7 @@ namespace AMHelper.CSV
         public string SEZIONALE { get; set; }
         public string DES_DOC { get; set; }
         public string NUM_DOC { get; set; }
-        public string DES_NOTE { get; set; } 
+        public string DES_NOTE { get; set; }
         public string DATA_DOC { get; set; }
         public string DOCORIG { get; set; }
         public string DEPOSITO { get; set; }
@@ -45,5 +45,16 @@ namespace AMHelper.CSV
         public string NUM_FATT { get; set; }
         public string DATA_CONSEGNA { get; set; }
         public string DAT_ULT_MOD { get; set; }
+
+        public string NUM_DOC_APP { get; set; }
+
+        public string COD_PAGAMENTO { get; set; }
+        public string FLG_RITIRO { get; set; }
+
+        public string DES_NOTE_DOC { get; set; }
+
+        public string DES_NOTE_FATT { get; set; }
+
+        public string DES_NOTE_CONSEGNA { get; set; }
     }
 }
