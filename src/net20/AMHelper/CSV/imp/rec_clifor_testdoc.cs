@@ -48,7 +48,7 @@ namespace AMHelper.CSV
 
         public string NUM_DOC_APP { get; set; }
 
-        public string COD_PAGAMENTO { get; set; }
+        public string COD_PAGAM { get; set; }
         public string FLG_RITIRO { get; set; }
 
         public string DES_NOTE_DOC { get; set; }
