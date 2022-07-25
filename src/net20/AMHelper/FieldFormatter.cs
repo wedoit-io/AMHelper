@@ -221,15 +221,8 @@ namespace AMHelper
             return ((int)(content)).ToString();
         }
 
-        static public string Decompone(string value, out string flg_ritiro)
+        static public string Decompone(string value)
         {
-            flg_ritiro = "0";
-
-            if (value.Contains("Ritiro"))
-            {
-                flg_ritiro = "1";
-            }
-
             if (value.Contains("Urgente"))
             {
                 return "Urgente";
