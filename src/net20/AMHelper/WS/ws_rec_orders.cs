@@ -58,14 +58,14 @@ namespace AMHelper.WS
         public string importatore { get; set; }
         public string utente { get; set; }
 
-        public string noteFattura { get; set; }
-        public string noteConsegna { get; set; }
-        public string noteGenerali { get; set; }
+        public string des_note_fat { get; set; }
+        public string des_note_cons { get; set; }
+        public string des_note_gen { get; set; }
         public decimal? cod_urgenza { get; set; }
-        public decimal? flag_aggiunta { get; set; }
+        public decimal? flg_aggiunta { get; set; }
         public string cod_magazzino { get; set; }
-        public decimal? flag_ritiro { get; set; }
-        public DateTime? data_ritiro { get; set; }
+        public decimal? data_ritiro { get; set; }
+        public DateTime? flg_ritiro { get; set; }
         public string pec_clifor { get; set; }
         public string cod_gg_consegna_clifor { get; set; }
         public string cod_tipo_cliente_clifor { get; set; }
