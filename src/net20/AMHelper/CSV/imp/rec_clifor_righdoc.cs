@@ -37,5 +37,8 @@ namespace AMHelper.CSV
         public string COD_CLIFOR { get; set; }
         public string DAT_ULT_MOD { get; set; }
 
+        public string COD_DEST { get; set; }
+        public string DATA_CONS { get; set; }
+
     }
 }

@@ -508,7 +508,7 @@ namespace AMHelper.WS
             return true;
         }
 
-        public bool exp_orders(int StartID, ref ws_rec_orders OrdersData)
+        public bool exp_orders(int StartID, ref ws_rec_orders OrdersData, int count = 0, int? limit = null)
         {
             try
             {
@@ -527,9 +527,12 @@ namespace AMHelper.WS
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
                 request.AddParameter("offset", 0);
-                request.AddParameter("limit", 30); // quanti ne elaboro al massimo ?
+                if (limit.HasValue)
+                {
+                    request.AddParameter("limit", limit.Value); // quanti ne elaboro al massimo ?
+                }
                 request.AddParameter("lastDateImport", null);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
-                request.AddParameter("count", 0);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
+                request.AddParameter("count", count);  // count = 0 ritorna i dati. Se = 1 ritorna solo alcune statistiche
                 request.AddParameter("lastID", StartID);
                 request.AddParameter("statusExport", null);
 
@@ -575,10 +578,13 @@ namespace AMHelper.WS
 
                 _ResponseURI = response.ResponseUri.ToString();
 
-                if (myDeserializedData.testate.Count == 0)
+                if (myDeserializedData.testate != null && count == 0)
                 {
-                    _InfoMessage = "Data not found";
-                    return false;
+                    if (myDeserializedData.testate.Count == 0)
+                    {
+                        _InfoMessage = "Data not found";
+                        return false;
+                    }
                 }
 
                 OrdersData = myDeserializedData;

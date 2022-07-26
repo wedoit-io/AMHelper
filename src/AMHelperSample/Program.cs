@@ -81,7 +81,7 @@ namespace AMHelperSample
                 bool retRelease = lmdata.send_release("1.0");
 
 
-                string wsURL = AMData.url_am_api ;
+                string wsURL = AMData.url_am ;
                 
                 string CodProgetto = AMData.cod_prog;
                 
