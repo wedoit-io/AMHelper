@@ -65,5 +65,7 @@ namespace AMHelper.CSV
         public string FILLER19 { get; set; }
         public string FILLER20 { get; set; }
         public string COD_SERIE_ORDINI { get; set; }
+
+        public string NUM_DOC_AGGIUNTA { get; set; }
     }
 }
