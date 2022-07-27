@@ -508,7 +508,7 @@ namespace AMHelper.WS
             return true;
         }
 
-        public bool exp_orders(int StartID, ref ws_rec_orders OrdersData, int count = 0, int? limit = null)
+        public bool exp_orders(int StartID, ref ws_rec_orders OrdersData, int count = 0, int offset = 0, int? limit = null)
         {
             try
             {
@@ -526,7 +526,7 @@ namespace AMHelper.WS
                 var request = new RestRequest(Method.GET);
                 request.AddParameter("authKey", this.AuthKeyAM);
                 request.AddParameter("format", "json");
-                request.AddParameter("offset", 0);
+                request.AddParameter("offset", offset);
                 if (limit.HasValue)
                 {
                     request.AddParameter("limit", limit.Value); // quanti ne elaboro al massimo ?
