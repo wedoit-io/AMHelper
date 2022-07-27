@@ -72,7 +72,7 @@ namespace AMHelper.WS
         public string cod_zona_consegna_clifor { get; set; }
         public string cod_serie_ordini { get; set; }
 
-        public string des_aggiunta { get; set; }
+        public string num_doc_aggiunta { get; set; }
 
         public List<Clienti> clienti { get; set; }
         public List<RigaOrdineExport> righe { get; set; }
