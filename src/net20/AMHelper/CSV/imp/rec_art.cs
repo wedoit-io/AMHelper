@@ -192,6 +192,10 @@ namespace AMHelper.CSV
         /// Flag ordinabile
         /// </summary>
         public string FLG_ORDINABILE { get; set; }
+        /// <summary>
+        /// Classe provvigionale
+        /// </summary>
+        public string DES_CLA_PROV { get; set; }
 
         //public string Nome { get { return "nomefile.dat";  } }
 
