@@ -183,7 +183,7 @@ namespace AMHelper.CSV
         /// <summary>
         /// Flag redditività articolo
         /// </summary>
-        public string FLG_REDDITTIVITA { get; set; }
+        public string FLG_REDDITIVITA { get; set; }
         /// <summary>
         /// Flag kit
         /// </summary>
