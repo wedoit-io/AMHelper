@@ -183,7 +183,7 @@ namespace AMHelper.CSV
         /// <summary>
         /// Flag redditività articolo
         /// </summary>
-        public string FLG_REDDITTIVITA { get; set; }
+        public string FLG_REDDITIVITA { get; set; }
         /// <summary>
         /// Flag kit
         /// </summary>
@@ -192,6 +192,10 @@ namespace AMHelper.CSV
         /// Flag ordinabile
         /// </summary>
         public string FLG_ORDINABILE { get; set; }
+        /// <summary>
+        /// Classe provvigionale
+        /// </summary>
+        public string DES_CLA_PROV { get; set; }
 
         //public string Nome { get { return "nomefile.dat";  } }
 

@@ -40,5 +40,9 @@ namespace AMHelper.CSV
         public string COD_DEST { get; set; }
         public string DATA_CONS { get; set; }
 
+        public string DES_STATO_RIGA { get; set; }
+
+        public string COD_STATO_RIGA { get; set; }
+
     }
 }
