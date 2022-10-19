@@ -87,9 +87,6 @@ namespace AMHelper
             return Retval;
         }
 
-
-        // -------------------------
-
         /// <summary>
         /// Utilizzato nell'import dei tracciati (es: import io_art.dat)
         /// </summary>
@@ -98,8 +95,17 @@ namespace AMHelper
         static public DateTime String2DateUltMod(string DataString)
         {
             System.Globalization.CultureInfo provider = System.Globalization.CultureInfo.InvariantCulture;
-
             string format = "ddMMyyyyHHmmss";
+
+            if (string.IsNullOrEmpty(DataString))
+            {
+                return DateTime.MinValue;
+            }
+
+            if (DataString?.Length == 8)
+            {
+                format = "ddMMyyyy";
+            }
 
             DateTime Result;
             try
