@@ -99,7 +99,7 @@ namespace AMHelper
 
             if (string.IsNullOrEmpty(DataString))
             {
-                return DateTime.MinValue;
+                return System.Data.SqlTypes.SqlDateTime.MinValue.Value;
             }
 
             if (DataString?.Length == 8)
