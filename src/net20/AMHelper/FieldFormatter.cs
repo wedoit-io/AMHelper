@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace AMHelper
@@ -118,6 +119,28 @@ namespace AMHelper
             }
 
             return Result;
+        }
+
+        /// <summary>
+        /// Utilizzato nell'import dei tracciati (es: import io_art.dat)
+        /// </summary>
+        /// <param name="DataString"></param>
+        /// <returns></returns>
+        static public DateTime String2DateUltMod2022(string DataString)
+        {
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            string format = "ddMMyyyyHHmmss";
+            string dataPlusTime = DataString ?? string.Empty;
+
+            if (dataPlusTime?.Length == 8)
+            {
+                dataPlusTime += DateTime.Now.ToString("HHmmss",provider);
+            }
+
+            var dataOk = DateTime.TryParseExact(dataPlusTime, format, provider, DateTimeStyles.None, out DateTime Result);
+
+            return dataOk ? Result : System.Data.SqlTypes.SqlDateTime.MinValue.Value;
+
         }
 
         /// <summary>
