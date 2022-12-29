@@ -354,5 +354,76 @@ namespace AMHelper.WS
 
             return true;
         }
+
+
+        public bool set_tipo_agente(string codiceAgente, string url = "")
+        {
+            string ServiceUrl = url;
+
+
+            //if (string.IsNullOrEmpty(url))
+            //{
+            //    if (Production)
+            //    {
+            //        ServiceUrl = @"http://lm.giessedati.it/lmAPI/v1/getAMParam";
+            //    }
+            //    else
+            //    {
+            //        ServiceUrl = @"http://test.giessedati.it/licenseManagerAPI/v1/getAMParam";
+            //    }
+            //}
+            //else
+            //{
+            //    ServiceUrl = url;
+            //}
+
+            try
+            {
+
+
+                var client = new RestClient(ServiceUrl);
+
+                if (!String.IsNullOrEmpty(this._ProxyUser))
+                {
+                    client.Proxy = new WebProxy(_ProxyHost, _ProxyPort);
+                    client.Proxy.Credentials = new NetworkCredential(_ProxyUser, _ProxyPassword);
+                }
+
+
+                var request = new RestRequest("/", Method.POST);
+
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(new { CodiceAgente = codiceAgente });
+                var response = client.Execute<bool>(request);
+
+                if (response.ResponseStatus != ResponseStatus.Completed)
+                {
+                    throw new Exception("ResponseStatus: " + response.ErrorMessage);
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception("StatusCode: " + response.StatusCode);
+                }
+
+                if (response.ErrorException != null)
+                {
+                    throw new Exception("Error retrieving response 2.  Check inner details for more info.");
+                }
+
+#if NET20
+                var myDeserializedData = JsonConvert.DeserializeObject<bool>(response.Content);
+#endif
+
+#if NET35 || NET40
+                var myDeserializedData = response.Data;
+#endif
+                return myDeserializedData;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("get_am_par: " + ex.Message, ex);
+            }
+        }
     }
 }
